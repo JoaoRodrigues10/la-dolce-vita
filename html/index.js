@@ -1,16 +1,22 @@
 
-document.getElementById('carrinho-icon').addEventListener('click', function(event) {
-    event.stopPropagation(); // Evita que o clique se propague para o contêiner pai
-    document.getElementById('myModal').style.display = 'block';
+const modalLogin = document.querySelector('.modalLogin');
+const linkregistrar = document.querySelector('.link-registrar');
+const linklogin = document.querySelector('.link-login');
+const btnmodallogin = document.querySelector('.btn-modal-login');
+const btnfecharmodallogin = document.querySelector('.icon-fechar');
+
+linkregistrar.addEventListener('click', () => {
+    modalLogin.classList.add('ativo');
 });
 
-
-document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('myModal').style.display = 'none';
+linklogin.addEventListener('click', () => {
+    modalLogin.classList.remove('ativo');
 });
 
-window.addEventListener('click', function(event) {
-    if (event.target == document.getElementById('myModal')) {
-        document.getElementById('myModal').style.display = 'none';
-    }
+btnmodallogin.addEventListener('click', () => {
+    modalLogin.classList.add('modal-ativo');
+});
+
+btnfecharmodallogin.addEventListener('click', () => {
+    modalLogin.classList.remove('modal-ativo');
 });
