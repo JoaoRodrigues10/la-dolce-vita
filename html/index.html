@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Dolce Vita</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <style>
         body {
@@ -19,23 +20,23 @@
     
 </head>
 <body>
-    <div class="container">
-        <header class="cabecalho">
-            <img class="logo-cabecalho" src="img/logo.png" alt="">
+    <div class="conteudo-principal">
+        <header class="main-header">
+            <img class="logo-main-header" src="img/logo.png" alt="">
             <input type="text" placeholder="O que você está procurando?"  class="search-input">
             <button class="btn-lupa" type="submit"></button>
             
 
-            <div class="icons_cabecalho">
+            <div class="icons-header">
                 <button class="btn-modal-login">Login </a> </button>
-                <div><a href=""><img id="carrinho-icon" src="img/carrinho.png" alt=""></a>
+                <div><a href=""><img id="icon-cart" src="img/carrinho.png" alt=""></a>
                    
             </div>
 
         </header>
 
         <div class="modalLogin">
-            <span class="icon-fechar">
+            <span class="icon-close">
                 <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#ffffff"></path> </g></svg>
             </span>
             
@@ -59,8 +60,8 @@
 
                     <button type="submit" class="btn-entrarLogin">Login</button>
 
-                    <div class="registrar-esqueceusenha">
-                        <p> Não tem conta? <a href="#" class="link-registrar"> Criar nova conta</a> </p>
+                    <div class="register-forgotpassword">
+                        <p> Não tem conta? <a href="#" class="link-register"> Criar nova conta</a> </p>
                     </div>
                 </form>
             </div>
@@ -85,21 +86,31 @@
 
                     <button type="submit" class="btn-entrarRegistrar">Registrar</button>
 
-                    <div class="registrar-esqueceusenha">
+                    <div class="register-forgotpassword">
                         <p> Já tem conta? <a href="#" class="link-login"> Login</a> </p>
                     </div>
                 </form>
             </div>
         </div>
         
-        <div class="container">
-            
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Aqui está o conteúdo do seu carrinho de compras...</p>
-                </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="7000">
+                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="8000">
+                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            
         </div>
 
         
@@ -145,5 +156,6 @@
     </div>
 
     <script type="text/javascript" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

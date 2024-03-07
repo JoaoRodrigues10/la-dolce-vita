@@ -1,9 +1,9 @@
 
 const modalLogin = document.querySelector('.modalLogin');
-const linkregistrar = document.querySelector('.link-registrar');
+const linkregistrar = document.querySelector('.link-register');
 const linklogin = document.querySelector('.link-login');
 const btnmodallogin = document.querySelector('.btn-modal-login');
-const btnfecharmodallogin = document.querySelector('.icon-fechar');
+const btnfecharmodallogin = document.querySelector('.icon-close');
 
 linkregistrar.addEventListener('click', () => {
     modalLogin.classList.add('ativo');

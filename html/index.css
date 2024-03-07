@@ -6,11 +6,13 @@ header {
     
 }
 
-.logo-cabecalho img {
+
+
+.logo-main-header img {
     max-width: 250px;
 }
 
-.cabecalho input[type="text"] {
+.main-header input[type="text"] {
     width: 500px;
     height: 50px;
     padding: 1em;
@@ -39,7 +41,7 @@ header {
 }
 
 
-.icons_cabecalho {
+.icons-header {
 
     display: flex;
     flex-direction: row;
@@ -48,7 +50,7 @@ header {
 }
 
 
-.icons_cabecalho img {
+.icons-header img {
     padding-left: 2em;
 
     cursor: pointer;
@@ -178,7 +180,7 @@ footer img {
     position: absolute;
 }
 
-.modalLogin .icon-fechar {
+.modalLogin .icon-close {
     position: absolute;
     top:0;
     right: 0;
@@ -248,19 +250,19 @@ footer img {
     color: #162938;
 }
 
-.registrar-esqueceusenha {
+.register-forgotpassword {
     text-align: center;
     color: #162938;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
-.registrar-esqueceusenha a {
+.register-forgotpassword a {
     color: #162938;
     text-decoration: none;
 }
 
-.registrar-esqueceusenha a:hover{
+.register-forgotpassword a:hover{
     text-decoration: underline;
 }
 
@@ -276,4 +278,13 @@ footer img {
     font-size: 0.7em;
     color: #fff;
     font-weight: 500;
+}
+
+.carousel-item{
+    height: 30em !important;
+}
+
+.carousel-item img {
+    height: 30em !important;
+    
 }
