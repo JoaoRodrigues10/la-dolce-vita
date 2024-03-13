@@ -286,5 +286,8 @@ footer img {
 
 .carousel-item img {
     height: 30em !important;
-    
+}
+
+.carousel-indicators.ativo{
+    display: none !important;
 }
