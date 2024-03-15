@@ -81,6 +81,40 @@ Exibe o rank de produtos. Podendo vizualizar meses anteriores, pesquisar pelo co
 
 Protótipo Usuários
 
-![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/4c57644b-e8fe-4beb-8c84-eb9580756a72)
 
+- Tela Início
 
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/f446e8e2-e271-4df6-bfb5-353177e4979f)
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/69ce2152-4e7a-4306-a678-eaddda4362a0)
+
+- Tela Menu
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/6539a577-5597-4232-a798-9ad324d8ddf3)
+
+- Tela Bolos
+  
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/2c6a5be2-7b40-4a76-b344-2aa5f6fa6ca3)
+
+- Tela Bolos quando abre um item
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/29a96c90-7f65-4805-8490-6caf57203a17)
+
+- Tela Tortas
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/da6a7a23-f76a-4bfd-a2b4-97d821776cb9)
+
+- Tela Gateaus
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/023cebec-4e4f-4784-8c06-0ee4633bee97)
+
+- Tela Doces
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/2113f5f7-63fe-4959-a2fd-e1f3ace1a3b1)
+
+- Tela Perfil
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/571a9152-1873-42ce-94fc-416cd7cac18f)
+
+- Tela Carrinho
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/fd50c136-abf2-4b04-831e-87ab98f4a60d)
