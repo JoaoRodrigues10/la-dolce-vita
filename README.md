@@ -1,8 +1,8 @@
 # La-Dolce-Vita
 Projeto PI 3
  
- 
 Requisitos Funcionais
+
 1 – Permitir que os clientes se cadastrem no site fornecendo informações básicas, como nome,
 endereço, e-mail e senha.
 
