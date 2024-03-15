@@ -44,6 +44,9 @@ o painel do administrador.
 4 – Garantir tempos de resposta rápidos para o carregamento de páginas e processamento de
 pedidos.
 
+MER
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/143283670/e6563e83-04e3-44f9-9de9-242e0c6d4a6e)
+
 
 Prótotipo Área do Administrador
 
