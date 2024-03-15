@@ -48,6 +48,9 @@ MER
 
 ![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/143283670/e6563e83-04e3-44f9-9de9-242e0c6d4a6e)
 
+ Diagrama UML
+ 
+ ![Diagrama sem nome drawio](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/133686132/cd1bf181-36ed-4905-8004-941210c838b0)
 
 Prótotipo Área do Administrador
 
