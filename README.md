@@ -76,3 +76,8 @@ Exibe o rank de produtos. Podendo vizualizar meses anteriores, pesquisar pelo co
 
 
 
+Protótipo Usuários
+
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/89986701/4c57644b-e8fe-4beb-8c84-eb9580756a72)
+
+
