@@ -45,6 +45,7 @@ o painel do administrador.
 pedidos.
 
 MER
+
 ![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/143283670/e6563e83-04e3-44f9-9de9-242e0c6d4a6e)
 
 
