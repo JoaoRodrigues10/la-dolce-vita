@@ -69,7 +69,7 @@ Menu com acesso aos Lucros, estoque e produtos mais vendidos.
 Página para adicionar novos produtos com campos para preenchimento de dados, upload de imagem para a identificação do produto 
 e a opção de limpar os campos.
 
-****![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/143104412/536ae04f-33c2-4029-b6e7-7dd8b0d298ac)
+![image](https://github.com/JoaoRodrigues10/la-dolce-vita/assets/143104412/536ae04f-33c2-4029-b6e7-7dd8b0d298ac)
 
 Página de controle de estoque. Possível editar informações do produto, como: Preço, nome e quantidade. E também deletar produtos.
 
