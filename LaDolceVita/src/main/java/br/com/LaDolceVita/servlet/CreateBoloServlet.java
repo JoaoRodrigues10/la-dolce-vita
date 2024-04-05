@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/create-Bolo")
+@WebServlet("/create-bolo")
 public class CreateBoloServlet extends HttpServlet {
 
     @Override
