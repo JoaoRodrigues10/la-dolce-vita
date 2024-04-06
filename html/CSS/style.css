@@ -1,0 +1,72 @@
+
+.barra-topo{
+    background-color: #FFB6C1;
+    width: 100%;
+    padding: 8px
+    
+}
+.barra-nossa-loja{
+    background-color: #FFB6C1;
+    width: 100%;
+    padding:15px;
+    
+    
+}
+
+.menu-topo{
+    background-color: #FFF;
+    width: 100%;
+    padding: 33px
+    
+}
+
+.btn-custom{
+    border-color: #FFB6C1;
+    background: #FFB6C1;
+    padding: 7px;
+    border-radius: 50px;
+    width: 120px;
+    height: 45px
+}
+
+.btn-custom:hover{
+    color: #FFFFFF;
+    background: #FFE7EA;
+    border-color: #FFB6C1
+        
+}
+
+.social-media {
+   
+    margin: 1rem 0;
+}
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s;
+}
+.link-social-media:hover .item-social-media{
+    background-color: #FFB6C1;
+    color: #fff;
+    border-color:#FFB6C1;
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+   
+}
+.item-social-media {
+    border: 1px solid #FFB6C1;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #212529;
+}
+
+.container-roda-pe{
+    position:inherit
+    
+}

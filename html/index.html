@@ -1,163 +1,287 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Dolce Vita</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <style>
-        body {
-          margin: 0px;
-          font-family: 'Josefin Sans', sans-serif;
-        }
-  
-        * {
-          box-sizing: border-box;
-        }
-      </style>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>La Dolce Vita - Ínicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <style>
+            a:link{
+                color: #FFB6C1;
+                text-decoration: none;
+            }
+            a:visited{
+                color: #FFB6C1;
+            }
+            a:hover{
+                text-decoration: underline;
+                background-color: #FFE7EA;
+            }
+            
+            
+        </style>
+   </head>
+        
     
-</head>
-<body>
-    <div class="conteudo-principal">
-        <header class="main-header">
-            <img class="logo-main-header" src="img/logo.png" alt="">
-            <input type="text" placeholder="O que você está procurando?"  class="search-input">
-            <button class="btn-lupa" type="submit"></button>
-            
-
-            <div class="icons-header">
-                <button class="btn-modal-login">Login </a> </button>
-                <div><a href=""><img id="icon-cart" src="img/carrinho.png" alt=""></a>
-                   
-            </div>
-
-        </header>
-
+    <body>
         
         
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
-                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="7000">
-                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="8000">
-                <img src="img/fotobolo1.png" class="d-block w-100" alt="...">
-              </div>
-            </div>
+        
+        
+        <div class="barra-topo">
+            <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p><strong>FAÇA AGORA SEU PEDIDO ONLINE.</strong></p>
+                    </blockquote>
+            </figure>
             
         </div>
-
         
-        <nav>
-            <a href="#"><img src="chocolates.png" alt="Bolos"></a>
-            <a href="#"><img src="confeitaria.png" alt="Tortas"></a>
-        </nav>
-
-        
-        <main>
-            <div>
-                <h1>Brilhe nesta Páscoa com Bolos De Cenoura!</h1>
-                <p>Com até 10% de desconto</p>
-                <button>COMPRAR</button>
-            </div>
-            <div>
-                
-                <img src="bolo-pascoa.jpg" alt="Bolo de Páscoa">
-            </div>
-        </main>
-
-        <footer>
-            <div class="section">
-                <h3>Institucional</h3>
-            </div>
-            <div class="section">
-                <h3>Conta</h3>
-            </div>
-            <div class="section">
-                <h3>Atendimento/SAC</h3>
-            </div>
-            <div class="section">
-                <h3>Nossas Redes</h3>
-                
-            </div>
-        
-            
-            <div class="payment-and-security-logos">
-               
-           </div> 
-        </footer>
-
-        <div class="modalLogin">
-            <span class="icon-close">
-                <svg viewBox="0 0 24 24" width="30px" height="30px" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#ffffff"></path> </g></svg>
-            </span>
-            
-            <div class="formbox login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"></path> </g></svg>
-                        </span>
-                        <input type="email" required >
-                        <label>E-mail</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <svg fill="#000000" width="20px" height="20px" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.182 8.927v6.912a.794.794 0 0 1-.792.792H1.61a.794.794 0 0 1-.792-.792V8.927a.794.794 0 0 1 .792-.792h.856V6.367a3.534 3.534 0 1 1 7.068 0v1.768h.856a.794.794 0 0 1 .792.792zm-2.756-2.56a2.426 2.426 0 1 0-4.852 0v1.768h4.852zM7.108 11.47a1.108 1.108 0 1 0-1.583 1.001v1.849a.475.475 0 0 0 .95 0v-1.849a1.108 1.108 0 0 0 .633-1.001z"></path></g></svg>
-                        </span>
-                        <input type="password" required>
-                        <label>Senha</label>
-                    </div>
-
-                    <button type="submit" class="btn-entrarLogin">Login</button>
-
-                    <div class="register-forgotpassword">
-                        <p> Não tem conta? <a href="#" class="link-register"> Criar nova conta</a> </p>
-                    </div>
-                </form>
-            </div>
-
-            <div class="formbox registro">
-                <h2>Registar</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"></path> </g></svg>
-                        </span>
-                        <input type="email" required >
-                        <label>E-mail</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <svg fill="#000000" width="20px" height="20px" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.182 8.927v6.912a.794.794 0 0 1-.792.792H1.61a.794.794 0 0 1-.792-.792V8.927a.794.794 0 0 1 .792-.792h.856V6.367a3.534 3.534 0 1 1 7.068 0v1.768h.856a.794.794 0 0 1 .792.792zm-2.756-2.56a2.426 2.426 0 1 0-4.852 0v1.768h4.852zM7.108 11.47a1.108 1.108 0 1 0-1.583 1.001v1.849a.475.475 0 0 0 .95 0v-1.849a1.108 1.108 0 0 0 .633-1.001z"></path></g></svg>
-                        </span>
-                        <input type="password" required>
-                        <label>Senha</label>
-                    </div>
-
-                    <button type="submit" class="btn-entrarRegistrar">Registrar</button>
-
-                    <div class="register-forgotpassword">
-                        <p> Já tem conta? <a href="#" class="link-login"> Login</a> </p>
-                    </div>
-                </form>
-            </div>
+        <div class="menu menu-topo">
+            <div class="text-center"><h1>ÍNICIO         MENU         SOBRE          CONTATO</h1></div>
         </div>
         
-    </div>
+        
+        <div><div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    
+                  <div class="carousel-item active">
+                    <img src="img/capa.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                    
+                        <div class="carousel-item">
+                          <img src="img/capa.png" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                          </div>
+                        </div>
+                    
+                  <div class="carousel-item">
+                    <img src="img/capa.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+                
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+        </div>
+        </div>
+        
+        
+        
+        <div class="container text-center">
+            
+            </br></br>
+            
+              <div class="row">
+              <div class="col">
+                  <h2>Horario</h2>
+                  </br>
+                  <h3><small class="text-body-secondary">TODOS OS DIAS. DAS 10H AS 22H.</small></h3>
+              </div>
+                  
+</br></br></br>
 
-    <script type="text/javascript" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+              <div class="col order-5">
+                  
+                  <h2>DELIVERY</h2>
+                  </br>
+                  <h3><small class="text-body-secondary">Temos delivery todos os dias das 12 às 22h em todas as unidades</small></h3>
+              </div>
+        
+              </div>
+        </div>
+        
+        </br></br>
+        
+                <div class="barra-topo">
+                    <figure class="text-center">
+                            <blockquote class="blockquote">
+                                <p><strong>FAÇA AGORA MESMO SEU PEDIDO.</strong></p>
+                            </blockquote>
+                    </figure>
+
+                </div>
+        
+        </br></br></br>
+        
+                        <div class="container text-center">
+                            <div class="row">
+                                
+                                <div class="col-md-4"><h2> VISÃO</h2>
+                                    </br>
+                                    
+                                <h5>Ser reconhecida como a confeitaria referência em excelência, criatividade e sabor irresistível, proporcionando momentos de doçura e felicidade aos nossos clientes.
+                                </h5></div>
+                              
+                                <div class="col-md-4 offset-md-4"><h2>MISSÃO</h2> 
+                                    </br>
+                                    <h5>Criar e oferecer produtos de confeitaria excepcionais, utilizando ingredientes de alta qualidade, técnicas artesanais e uma dose generosa de paixão,
+                                        para encantar os paladares mais exigentes e tornar cada momento especial e memorável.</h5>
+                                    </br>
+                                </div>
+                            </div>
+                       
+                        <div class="row">
+                            <div class="col-md-8 offset-md-3"><h2>VALORES</h2>
+                                </br>
+                                <h5>Comprometemo-nos com qualidade em cada etapa do processo, desde a escolha dos ingredientes até a apresentação final dos produtos. Incentivamos a inovação e 
+                                    originalidade para surpreender nossos clientes. Amamos o que fazemos, dedicando energia para criar experiências deliciosas. Agimos com honestidade, 
+                                    transparência e respeito em todas as relações. Priorizamos a satisfação do cliente, buscando sempre superar expectativas.</h5>
+                            </div>
+                              </div>
+                            </div>
+        </br></br></br>
+        
+                               <div class="row">
+                                
+                                        <div class="col-md-4">
+                                            </br>
+                                            <a href=""><img src="img/bolo2.png" alt=""></a>
+                                        </div>
+                              
+                                     <div class="col-md-4 offset-md-4"></br></br>
+                                         <h1>BOLO DE CHOCOLATE</h1> 
+                                             </br>
+                                    
+                                    <h5 class="text">A PARTIR</h5>
+                                   
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item display-2">R$ 61,50 </li>
+                                            <li class="list-inline-item">/kg</li>
+                                        </ul>
+                                    
+                                    </br>
+                                    
+                                    <p>
+                                        <a href="#" class="btn btn-primary btn-custom"> 
+                                            <span class="glyphicon img-circle text-primary btn-icon "></span><strong>Compre já!</strong>
+                                        </a>
+                                    </p>
+                                    
+                                     </div>
+                            </div>
+        
+                                    <div class="barra-nossa-loja">
+                                        
+                                       <div class="container-nossa-loja">
+                                        <div class="row">
+                                         
+                                            <div class="col-9"> 
+                                                
+                                                <figure class="text-center">
+                                                    <div class="text-nossa-loja"> <h2>NOSSAS LOJAS</h2></div> 
+                                                </figure>
+                                            </div>
+                                            
+                                            
+                                           <div class="col-4">Pinheiros<br>Rua dos Girassóis, 123 <br> (11)9 8765-5432</div>
+                                            <div class="col-4">Guarulhos<br>Avenida das Palmeiras, 456 <br> (11)9 8541-6385</div>
+                                            <div class="col-4">Morumbi<br>Travessa das Acácias, 789 <br>(11)9 5638-8423</div>
+                                        </div>
+                                      </div>
+
+                                   </div>
+                            
+                            <div class="img-rodape">
+                                
+                                <img src="img/roda-pe.png" class="d-block w-100" alt="...">
+                                
+                                
+                            </div>
+        <br>
+                            
+                            
+                            <div class="container-roda-pe">
+                                <div class="row text-center">
+                                  
+                                    <div class="col-4"><h2>LOGO</h2><br><br><br><br>
+                                      
+                                       <!-- Começo botões Redes sociais Roda pé -->
+                                  <div class="social-media text-center">
+                                     <ul class="list-social-media">
+                                      <a class="link-social-media" href="#">
+                                       
+                                          <li class="item-social-media">
+                                            <i class="fab fa-facebook-f"></i>        
+                                          </li>
+                                          
+                                      </a>
+                                         
+                                      <a class="link-social-media" href="#">
+                                        <li class="item-social-media">
+                                            <i class="fab fa-google-plus-g"></i>
+                                        </li>
+                                      </a>
+                                   
+                                      <a class="link-social-media" href="#">
+                                        <li class="item-social-media">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </li>
+                                      </a>
+                                </ul>
+                            </div> <!-- Final botões Redes sociais Roda pé -->
+                            
+                                                               
+                            <br> <h5> DESDE 2000 <small class="text-body-secondary">Confeitaria La Dolce Vita</small></h5>
+                         </div>
+                                    
+                                    
+                                    
+                                    
+                                    <div class="col-4"><h2>Home Page</h2><br> 
+                                    
+                                        <a href="#">LOJA ONLINE</a>  <br><br>
+                                        <a href="#">SOBRE</a>  <br><br>
+                                        <a href="#">MINHA CONTA</a><br> <br>
+                                        <a href="#">CONTATO</a> <br>
+                                    
+                                    </div>
+                                    <div class="col-4"><h2>Contato</h2><br> 
+                                    
+                                        <a><strong>Delivery</strong></a>  <br>
+                                        <a>(11)9 9429-9161</a><br><br>
+                                        
+                                        <a><strong>Eventos</strong></a>  <br>
+                                        <a>(11)9 9429-9161</a><br><br>
+                                                                                                                        
+                                        <a><strong>Trabalhe Conosco</strong></a> <br>
+                                        <a>(11)9 9429-9161</a><br><br>
+                                    </div>
+                                    
+                                </div>
+                              </div>
+
+    </body>
+
+
 </html>
