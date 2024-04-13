@@ -15,16 +15,15 @@ public class CreateProdutoServlet extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        String nomeProduto = req.getParameter("nome-produto");
+        String produtoName = req.getParameter("produto-name");
 
-        Produto produto = new Produto();
-        produto.setName(nomeProduto);
+        Produto produto = new Produto(produtoName);
 
         new ProdutoDAO().createProduto(produto);
 
-        req.getRequestDispatcher("index.html").forward(req,resp);
+        resp.sendRedirect("/find-all-produtos");
 
     }
 }
