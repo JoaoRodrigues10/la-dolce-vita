@@ -12,11 +12,18 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Actions</th>
         </tr>
         <c:forEach var="produto" items="${produtos}">
             <tr>
-                <td></td>
+                <td>${produto.id}</td>
                 <td>${produto.name}</td>
+                <td>
+                    <form action="/delete-produto" method="post">
+                        <input type="hidden" id="id" name="id" value="${produto.id}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         </c:forEach>
     </table>

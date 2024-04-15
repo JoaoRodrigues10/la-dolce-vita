@@ -1,3 +1,5 @@
+servlet\ListProdutoServlet.class
+servlet\DeleteProdutoServlet.class
 dao\ProdutoDAO.class
 model\Produto.class
 servlet\CreateProdutoServlet.class

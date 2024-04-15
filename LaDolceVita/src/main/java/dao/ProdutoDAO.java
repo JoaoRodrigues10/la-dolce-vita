@@ -41,7 +41,8 @@ public class ProdutoDAO {
             List<Produto> produtos = new ArrayList<>();
             while (resultSet.next()){
                 String produtoName = resultSet.getString("name");
-                Produto produto = new Produto(produtoName);
+                String produtoId = resultSet.getString("id");
+                Produto produto = new Produto(produtoId,produtoName);
                 produtos.add(produto);
             }
             System.out.println("success in select * produto");
@@ -50,6 +51,29 @@ public class ProdutoDAO {
         }catch (Exception e){
             System.out.println("fail in database connection");
             return Collections.emptyList();
+        }
+    }
+
+    public void deleteProdutoByld(String produtoId){
+        String SQL = "DELETE CAR WHERE ID = ?";
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, produtoId);
+            preparedStatement.execute();
+
+            System.out.println("success on delete Produto with id: " + produtoId);
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
         }
     }
 }
