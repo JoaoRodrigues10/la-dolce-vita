@@ -1,0 +1,142 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 240px;
+    height: 240px;
+    margin-right: 43%;
+    margin-left: 43%;
+    margin-top: -25px;
+    border-radius: 50%;
+  }
+  
+  .linha {
+    border: 0;
+    border-bottom: 1px solid #d7ebf2; /* Define a cor e largura da linha */
+    margin: -50px -50px; /* Define o espaçamento em torno da linha */
+  }
+
+h1{
+    text-align: center;
+    margin-right: 27%;
+    margin-left: 25.7%;
+    margin-top: 40px;
+}
+
+.lucro {
+    background-color: #d7ebf2;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 25%;
+    transform: translate(-50%, -50%);
+    padding: 7%;
+    padding-top: 22%;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+.imagem-lucro{
+    width: 300px; 
+    left: -39%;
+    top: 80px;
+    height: auto;
+    position: absolute;
+}
+
+.lucro .h3{
+    text-align: center;
+    font-size: 15;
+    padding: 10px;
+    margin-left: -250%;
+    width: 550%;
+    background-color:  white;
+}
+
+
+.estoque {
+    background-color: #d7ebf2;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 49%;
+    transform: translate(-50%, -50%);
+    padding: 7%;
+    padding-top: 22%;
+    border-radius: 10px;
+    color: black;
+   
+}
+
+.imagem-estoque{
+    width: 90%; 
+    margin-top: -100%;
+    left: -39%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+.estoque .h2{
+    text-align: center;
+    font-size: 15;
+    padding: 10px;
+    margin-top: -0%;
+    margin-left: -175%;
+    width: 425%;
+    background-color:  white;
+}
+
+
+.mais-vendidos {
+    background-color: #d7ebf2;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 75%;
+    transform: translate(-45%, -50%);
+    padding: 7.4%;
+    padding-top: 23.5%;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+.imagem-doces{
+    width: 90%; 
+    margin-top: -90%;
+    left: -38%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+.mais-vendidos .h1{
+    text-align: center;
+    font-size: 20;
+    padding: 10px;
+    padding-top: 10px;
+    margin-top: -25%;
+    margin-left: -120%;
+    width: 330%;
+    background-color:  white;
+}
+
+.link {
+    position: absolute;
+    background-color: #d7ebf2;
+    text-align: center;
+    padding: -10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 62%;
+    left: 9.7%;
+    padding-top: -10%;
+    margin-top: 40%;
+    border-radius: 10px;
+}
+
+
+
+
