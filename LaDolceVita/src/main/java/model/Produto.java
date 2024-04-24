@@ -2,16 +2,16 @@ package model;
 
 public class Produto {
 
-    private String name;
     private String id;
+    private String name;
 
-    public Produto(String name){
-        this.name = name;
-    }
 
     public Produto(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Produto(String nomeProduto) {
     }
 
     public String getId() {

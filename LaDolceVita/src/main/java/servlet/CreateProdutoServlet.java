@@ -1,6 +1,6 @@
 package servlet;
 
-import dao.ProdutoDAO;
+import dao.ProdutoDao;
 import model.Produto;
 
 import javax.servlet.ServletException;
@@ -15,13 +15,13 @@ public class CreateProdutoServlet extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String produtoName = req.getParameter("produto-name");
+        String nomeProduto = req.getParameter("nome-produto");
 
-        Produto produto = new Produto(produtoName);
+        Produto produto = new Produto(nomeProduto);
 
-        new ProdutoDAO().createProduto(produto);
+        new ProdutoDao().createProduto(produto);
 
         resp.sendRedirect("/find-all-produtos");
 
