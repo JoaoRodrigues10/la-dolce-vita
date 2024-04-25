@@ -11,7 +11,8 @@ public class Produto {
         this.name = name;
     }
 
-    public Produto(String nomeProduto) {
+    public Produto(String nameProduto) {
+        this.name = nameProduto;
     }
 
     public String getId() {
