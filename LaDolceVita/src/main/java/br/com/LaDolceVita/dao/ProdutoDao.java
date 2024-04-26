@@ -3,6 +3,7 @@ package br.com.LaDolceVita.dao;
 import br.com.LaDolceVita.config.ConnectionPoolConfig;
 import br.com.LaDolceVita.model.Produto;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,12 +16,15 @@ public class ProdutoDao {
 
     public void createProduto(Produto produto){
 
-        String SQL = "INSERT INTO PRODUTO (NAME) VALUES (?)";
+        String SQL = "INSERT INTO produto (nome, categoria, descricao, preco) VALUES (?, ?, ?, ?)";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setString(1, produto.getName());
+            preparedStatement.setString(2, produto.getCategoria());
+            preparedStatement.setString(3, produto.getDescricao());
+            preparedStatement.setBigDecimal(4,produto.getPreco());
             preparedStatement.execute();
             System.out.println("success in insert command");
             connection.close();
@@ -47,8 +51,12 @@ public class ProdutoDao {
 
                 String produtoId = resultSet.getString("id");
                 String produtoName = resultSet.getString("name");
+                String produtoCategoria = resultSet.getString("categoria");
+                String produtoDescricao = resultSet.getString("descricao");
+                String preco = resultSet.getString("preco");
+                BigDecimal precoProduto = new BigDecimal(preco);
 
-                Produto produto = new Produto(produtoId, produtoName);
+                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
 
                 produtos.add(produto);
 

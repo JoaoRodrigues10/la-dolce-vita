@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 @WebServlet("/create-produto")
 public class CreateProdutoServlet extends HttpServlet {
@@ -19,10 +20,15 @@ public class CreateProdutoServlet extends HttpServlet {
 
         String produtoId = req.getParameter("id");
         String produtoName = req.getParameter("name-produto");
+        String produtoCategoria = req.getParameter("categoria-produto");
+        String produtoDescricao = req.getParameter("descricao-produto");
+        String preco = req.getParameter("preco-produto");
+        BigDecimal precoProduto = new BigDecimal(preco);
+
 
         ProdutoDao produtoDao = new ProdutoDao();
 
-        Produto produto = new Produto(produtoId, produtoName);
+        Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
 
         if (produtoId.isBlank()) {
 
