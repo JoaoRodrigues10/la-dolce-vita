@@ -14,8 +14,8 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Categoria</th>
-                <th>Descrição</th>
-                <th>Preço</th>
+                <th>Descricao</th>
+                <th>Preco</th>
             </tr>
                 <tr>
                     <c:forEach var="produto" items="${produtos}">
@@ -29,7 +29,7 @@
                             <input type="hidden" id="id" name="id" value="${produto.id}">
                             <button type="submit">Delete</button>
                             <span> | </span>
-                            <a href="index.jsp?id=${produto.id}&name=${produto.name}">Update</a>
+                            <a href="index.jsp?id=${produto.id}&name=${produto.name}&categoria=${produto.categoria}&descricao=${produto.descricao}&preco=${produto.preco}">Update</a>
                         </form>
                     </td>
                 </tr>

@@ -50,7 +50,7 @@ public class ProdutoDao {
             while (resultSet.next()) {
 
                 String produtoId = resultSet.getString("id");
-                String produtoName = resultSet.getString("name");
+                String produtoName = resultSet.getString("nome");
                 String produtoCategoria = resultSet.getString("categoria");
                 String produtoDescricao = resultSet.getString("descricao");
                 String preco = resultSet.getString("preco");
@@ -102,7 +102,7 @@ public class ProdutoDao {
 
     public void updateProduto(Produto produto){
 
-        String SQL = "UPDATE PRODUTO SET NAME = ? WHERE ID = ?";
+        String SQL = "UPDATE PRODUTO SET NOME = ?, CATEGORIA = ?, DESCRICAO = ?, PRECO = ?  WHERE ID = ?";
 
         try {
 
@@ -111,7 +111,10 @@ public class ProdutoDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, produto.getName());
-            preparedStatement.setString(2, produto.getId());
+            preparedStatement.setString(2, produto.getCategoria());
+            preparedStatement.setString(3, produto.getDescricao());
+            preparedStatement.setBigDecimal(4, produto.getPreco());
+            preparedStatement.setString(5, produto.getId());
             preparedStatement.execute();
 
             System.out.println("success in update produto");
