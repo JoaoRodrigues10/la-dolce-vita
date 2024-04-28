@@ -1,0 +1,6 @@
+br\com\LaDolceVita\model\Produto.class
+br\com\LaDolceVita\config\ConnectionPoolConfig.class
+br\com\LaDolceVita\servlet\ListProdutoServlet.class
+br\com\LaDolceVita\dao\ProdutoDao.class
+br\com\LaDolceVita\servlet\CreateProdutoServlet.class
+br\com\LaDolceVita\servlet\DeleteProdutoServlet.class
