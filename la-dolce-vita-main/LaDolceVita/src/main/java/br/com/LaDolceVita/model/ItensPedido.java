@@ -1,27 +1,18 @@
 package br.com.LaDolceVita.model;
 
-import java.math.BigDecimal;
+
+import java.util.List;
+import java.util.ArrayList;
 
 public class ItensPedido {
     private String idItensPedido;
     private String idPedido;
-    private String idProduto;
-    private int quantidade;
-    private BigDecimal precoUnitario;
+    private List<ItemProduto> itensProduto;
 
-    public ItensPedido(String idItensPedido, String idPedido, String idProduto, int quantidade, BigDecimal precoUnitario) {
+    public ItensPedido(String idItensPedido, String idPedido) {
         this.idItensPedido = idItensPedido;
         this.idPedido = idPedido;
-        this.idProduto = idProduto;
-        this.quantidade = quantidade;
-        this.precoUnitario = precoUnitario;
-    }
-
-    public ItensPedido(String idPedido, String idProduto, int quantidade, BigDecimal precoUnitario) {
-        this.idPedido = idPedido;
-        this.idProduto = idProduto;
-        this.quantidade = quantidade;
-        this.precoUnitario = precoUnitario;
+        this.itensProduto = new ArrayList<>();
     }
 
     public String getIdItensPedido() {
@@ -32,19 +23,12 @@ public class ItensPedido {
         return idPedido;
     }
 
-    public String getIdProduto() {
-        return idProduto;
+    public List<ItemProduto> getItensProduto() {
+        return itensProduto;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public BigDecimal getPrecoUnitario() {
-        return precoUnitario;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public void adicionarItem(Produto produto, int quantidade) {
+        ItemProduto itemProduto = new ItemProduto(produto, quantidade);
+        itensProduto.add(itemProduto);
     }
 }
