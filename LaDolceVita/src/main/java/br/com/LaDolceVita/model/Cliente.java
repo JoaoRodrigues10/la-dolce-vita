@@ -20,6 +20,11 @@ public class Cliente {
         this.pedidos = new ArrayList<>();
     }
 
+    public Cliente(String email, String senha) {
+        this.email = email;
+        this.senha = senha;
+    }
+
     public Cliente(String id, String email, String cpf, String nome, LocalDate dataNascimento, String senha, String telefone, List<Endereco> enderecos, List<Pedido> pedidos) {
         this.id = id;
         this.email = email;
