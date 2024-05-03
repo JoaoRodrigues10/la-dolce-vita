@@ -2,16 +2,46 @@ package br.com.LaDolceVita.dao;
 
 import br.com.LaDolceVita.config.ConnectionPoolConfig;
 import br.com.LaDolceVita.model.Cliente;
-import br.com.LaDolceVita.model.Endereco;
 
 import java.sql.*;
 import java.time.LocalDate;
 
 public class ClienteDao {
 
+    public boolean verifyCredentials(Cliente cliente){
+
+        String SQL = "SELECT * FROM CLIENTES WHERE EMAIL = ?";
+
+        try{
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, cliente.getEmail());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            System.out.println("Success in select email");
+
+            while (resultSet.next()){
+                String senha = resultSet.getString("senha");
+                if(senha.equals(cliente.getSenha())){
+                    return true;
+                }
+            }
+
+            connection.close();
+            return true;
+
+        } catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+            return false;
+        }
+
+    }
+
+
     public void createCliente(Cliente cliente){
 
-        String SQL = "INSERT INTO clientes (email, cpf, nome, data_Nascimento, senha, telefone) VALUES (?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO CLIENTES (email, cpf, nome, data_Nascimento, senha, telefone) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
 

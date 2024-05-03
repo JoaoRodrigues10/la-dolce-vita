@@ -16,7 +16,7 @@ public class ProdutoDao {
 
     public void createProduto(Produto produto){
 
-        String SQL = "INSERT INTO produto (nome, categoria, descricao, preco) VALUES (?, ?, ?, ?)";
+        String SQL = "INSERT INTO PRODUTO (nome, categoria, descricao, preco) VALUES (?, ?, ?, ?)";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
