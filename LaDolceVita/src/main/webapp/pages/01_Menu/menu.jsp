@@ -1,61 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"href= "menu.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        a:link{
-            color: #FFB6C1;
-            text-decoration: none;
-        }
-        a:visited{
-            color: #FFB6C1;
-        }
-        a:hover{
-            text-decoration: underline;
-            background-color: #FFE7EA;
-        }
-
-
-    </style>
     <title>Menu</title>
+
 </head>
 
 <body>
-    <div class="aviso">
-        <div class="comunicado">FAÇA AGORA SEU PEDIDO ONLINE</div>
-    </div>
-
-    <div class="cabecalho">
-        <div class="logo">
-            <img src="../img/logo.jfif" alt="">
-        </div>
-        <div class="menu menu-topo">
-            <div class="text-center">
-
-                <a href="../index/index.html" class="btn btn btn-menu"><strong> INÍCIO</strong></a>
-                <a href="../01_Menu/menu.html" class="btn btn btn-menu"><strong> MENU</strong></a>
-                <a href="#" class="btn btn btn-menu"><strong> SOBRE</strong></a>
-                <a href="#" class="btn btn btn-menu"><strong> CONTATO</strong></a>
-
-            </div>
-        </div>
-        <div class="acoes">
-            <img src="../img/lupa.jfif" alt="">
-            <a href="../06_Login/login.html">
-                <img src="../img/perfil.jfif" alt="">
-            </a>
-            <img src="../img/sacola.jfif" alt="">
-        </div>
-    </div>
-
-    <div class="linha"></div>
+    <%@ include file="/pages/Componentes/cabecalho.jsp" %>
 
     <div class="titulo">MENU</div>
 
