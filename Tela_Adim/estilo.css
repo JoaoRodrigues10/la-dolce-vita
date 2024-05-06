@@ -2,33 +2,37 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
-    width: 240px;
-    height: 240px;
-    margin-right: 43%;
-    margin-left: 43%;
-    margin-top: -25px;
-    border-radius: 50%;
-  }
+img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 7%;
+    left: 50%;
+}
   
   .linha {
-    border: 0;
-    border-bottom: 1px solid #d7ebf2; /* Define a cor e largura da linha */
-    margin: -50px -50px; /* Define o espaçamento em torno da linha */
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #BBDEEA;
+    top: 11%;
+    transform: translateY(-50%);
+    border: none;
   }
 
 h1{
     text-align: center;
     margin-right: 27%;
     margin-left: 25.7%;
-    margin-top: 40px;
+    margin-top: 160px;
 }
 
 .lucro {
     background-color: #d7ebf2;
     position: absolute;
     margin-top: 20%;
-    margin-left: 25%;
+    margin-left: 15%;
     transform: translate(-50%, -50%);
     padding: 7%;
     padding-top: 22%;
@@ -39,10 +43,13 @@ h1{
 
 .imagem-lucro{
     width: 300px; 
-    left: -39%;
-    top: 80px;
+    left: 50%;
+    top: 200px;
     height: auto;
     position: absolute;
+    border-top-left-radius: 20px;
+    border: 2px solid #000;
+    border-radius: 100px;
 }
 
 .lucro .h3{
@@ -59,7 +66,7 @@ h1{
     background-color: #d7ebf2;
     position: absolute;
     margin-top: 20%;
-    margin-left: 49%;
+    margin-left: 37%;
     transform: translate(-50%, -50%);
     padding: 7%;
     padding-top: 22%;
@@ -70,11 +77,14 @@ h1{
 
 .imagem-estoque{
     width: 90%; 
-    margin-top: -100%;
-    left: -39%;
+    margin-top: 160px;
+    left: 50%;
     height: 300px;
     object-fit: cover;
     position: absolute;
+    border-top-left-radius: 20px;
+    border: 2px solid #000;
+    border-radius: 100px;
 }
 
 
@@ -93,7 +103,7 @@ h1{
     background-color: #d7ebf2;
     position: absolute;
     margin-top: 20%;
-    margin-left: 75%;
+    margin-left: 60%;
     transform: translate(-45%, -50%);
     padding: 7.4%;
     padding-top: 23.5%;
@@ -104,11 +114,15 @@ h1{
 
 .imagem-doces{
     width: 90%; 
-    margin-top: -90%;
-    left: -38%;
+    margin-top: 160px;
+    left: 50%;
     height: 300px;
     object-fit: cover;
     position: absolute;
+    border-top-left-radius: 20px;
+    border: 2px solid #000;
+    border-radius: 100px; 
+
 }
 
 
@@ -123,20 +137,57 @@ h1{
     background-color:  white;
 }
 
+.Adicionar {
+    background-color: #d7ebf2;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 85%;
+    transform: translate(-50%, -50%);
+    padding: 8%;
+    padding-top: 22%;
+    border-radius: 10px;
+    color: black;
+}
+
+.Adicionar .h3{
+    text-align: center;
+    font-size: 15;
+    padding: 6.5px;
+    margin-left: -240%;
+    width: 550%;
+    background-color:  white;
+}
+
+.imagem-docinhos{
+    width: 90%; 
+    margin-top: 160px;
+    left: 50%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border: 2px solid #000;
+    border-radius: 100px; 
+
+}
+
+
 .link {
     position: absolute;
     background-color: #d7ebf2;
     text-align: center;
-    padding: -10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 62%;
-    left: 9.7%;
-    padding-top: -10%;
-    margin-top: 40%;
-    border-radius: 10px;
+    padding: 0%;
+    
+    width: 100%;
+    height: 40px;
+    top:100%;
 }
 
 
 
+
+
+a{
+    text-decoration: none;
+}
 

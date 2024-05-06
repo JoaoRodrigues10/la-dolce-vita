@@ -16,11 +16,25 @@
 
     <div class="tela-login">
         <h5>Código de Administrador</h5>
-        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Nome" id="adm">
         <h5>Senha de Administrador</h5>
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Senha" id="senha">
         <br><br>
-        <button>Enviar</button>
+        <button type="submit" onclick="logar(); return false">Entrar</button>
     </div>
 </body>
+<script>
+    function logar(){
+
+        var login = document.getElementById('adm').value;
+        var senha = document.getElementById('senha').value;
+
+        if(login == "admin" && senha =="1234"){
+            alert("Sucesso"); 
+            location.href  = "Menu.html";
+         }else {
+            alert("Ususario ou senha incorretos");
+         }
+    }
+</script>
 </html>
