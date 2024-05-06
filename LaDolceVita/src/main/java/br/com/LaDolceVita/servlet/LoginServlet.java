@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         if(clienteAutenticado.isLogged()){
             req.getSession().setAttribute("loggedUser", email);
             req.getSession().setAttribute("id", clienteAutenticado.getId());
-            resp.sendRedirect("/find-all-produtos");
+            resp.sendRedirect("/Home.html");
         } else {
             req.setAttribute("message", "Invalid Credentials!");
             req.getRequestDispatcher("/login.jsp").forward(req,resp);
