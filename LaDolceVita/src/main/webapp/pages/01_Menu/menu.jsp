@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,37 +26,13 @@
 
     </style>
     <title>Menu</title>
+
 </head>
 
 <body>
-    <div class="aviso">
-        <div class="comunicado">FAÇA AGORA SEU PEDIDO ONLINE</div>
-    </div>
 
-    <div class="cabecalho">
-        <div class="logo">
-            <img src="../../img/logo.jfif" alt="">
-        </div>
-        <div class="menu menu-topo">
-            <div class="text-center">
 
-                <a href="../index/index.html" class="btn btn btn-menu"><strong> INÍCIO</strong></a>
-                <a href="../01_Menu/menu.html" class="btn btn btn-menu"><strong> MENU</strong></a>
-                <a href="#" class="btn btn btn-menu"><strong> SOBRE</strong></a>
-                <a href="#" class="btn btn btn-menu"><strong> CONTATO</strong></a>
-
-            </div>
-        </div>
-        <div class="acoes">
-            <img src="../../img/lupa.jfif" alt="">
-            <a href="../06_Login/login.html">
-                <img src="../../img/perfil.jfif" alt="">
-            </a>
-            <img src="../../img/sacola.jfif" alt="">
-        </div>
-    </div>
-
-    <div class="linha"></div>
+    <%@ include file="/pages/Componentes/cabecalho.jsp" %>
 
     <div class="titulo">MENU</div>
 
@@ -95,28 +72,22 @@
             </a>
         </div>
     </div>
-
     <div class="linha" id="rodape"></div>
-
     <div class="rodape">
         <div class="r1">
-            <img src="../../img/logo.jfif" alt="">
+            <img src="../img/logo.jfif" alt="">
             <div class="social-media text-center">
                 <ul class="list-social-media">
                     <a class="link-social-media" href="#">
-
                         <li class="item-social-media">
                             <i class="fab fa-facebook-f"></i>
                         </li>
-
                     </a>
-
                     <a class="link-social-media" href="#">
                         <li class="item-social-media">
                             <i class="fab fa-google-plus-g"></i>
                         </li>
                     </a>
-
                     <a class="link-social-media" href="#">
                         <li class="item-social-media">
                             <i class="fab fa-linkedin-in"></i>
@@ -149,10 +120,9 @@
             </div>
         </div>
     </div>
-    
+
     <div class="aviso">
         <div class="comunicado">WWW.LADOLCEVITA.COM.BR</div>
     </div>
-
 </body>
 </html>
