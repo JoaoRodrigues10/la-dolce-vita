@@ -16,7 +16,7 @@ public class ProdutoDao {
 
     public void createProduto(Produto produto){
 
-        String SQL = "INSERT INTO PRODUTO (nome, categoria, descricao, preco) VALUES (?, ?, ?, ?)";
+        String SQL = "INSERT INTO PRODUTOS (NOME, CATEGORIA, DESCRICAO, PRECO) VALUES (?, ?, ?, ?)";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
@@ -35,7 +35,7 @@ public class ProdutoDao {
 
     public List<Produto> findAllProdutos(){
 
-        String SQL = "SELECT * FROM PRODUTO";
+        String SQL = "SELECT * FROM PRODUTOS";
 
         try {
 
@@ -49,11 +49,11 @@ public class ProdutoDao {
 
             while (resultSet.next()) {
 
-                String produtoId = resultSet.getString("id");
-                String produtoName = resultSet.getString("nome");
-                String produtoCategoria = resultSet.getString("categoria");
-                String produtoDescricao = resultSet.getString("descricao");
-                String preco = resultSet.getString("preco");
+                String produtoId = resultSet.getString("ID_PRODUTO");
+                String produtoName = resultSet.getString("NOME");
+                String produtoCategoria = resultSet.getString("CATEGORIA");
+                String produtoDescricao = resultSet.getString("DESCRICAO");
+                String preco = resultSet.getString("PRECO");
                 BigDecimal precoProduto = new BigDecimal(preco);
 
                 Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
@@ -79,7 +79,7 @@ public class ProdutoDao {
 
     public void deleteProdutoById(String produtoId){
 
-        String SQL = "DELETE PRODUTO WHERE ID = ?";
+        String SQL = "DELETE PRODUTOS WHERE ID_PRODUTO = ?";
 
         try {
 
@@ -102,7 +102,7 @@ public class ProdutoDao {
 
     public void updateProduto(Produto produto){
 
-        String SQL = "UPDATE PRODUTO SET NOME = ?, CATEGORIA = ?, DESCRICAO = ?, PRECO = ?  WHERE ID = ?";
+        String SQL = "UPDATE PRODUTOS SET NOME = ?, CATEGORIA = ?, DESCRICAO = ?, PRECO = ?  WHERE ID_PRODUTO = ?";
 
         try {
 

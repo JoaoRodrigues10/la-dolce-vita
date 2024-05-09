@@ -23,6 +23,7 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String senha = req.getParameter("senha");
 
+
         Cliente cliente = new Cliente(email,senha);
 
         Cliente clienteAutenticado = new ClienteDao().verifyCredentials(cliente);
@@ -30,9 +31,9 @@ public class LoginServlet extends HttpServlet {
         if(clienteAutenticado.isLogged()){
             req.getSession().setAttribute("loggedUser", email);
             req.getSession().setAttribute("id", clienteAutenticado.getId());
-            resp.sendRedirect("/Home.html");
+            resp.sendRedirect("/index.jsp");
         } else {
-            req.setAttribute("message", "Invalid Credentials!");
+            req.setAttribute("message", "Usuario ou senha inválido !");
             req.getRequestDispatcher("/login.jsp").forward(req,resp);
         }
     }
