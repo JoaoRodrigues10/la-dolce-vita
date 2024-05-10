@@ -16,7 +16,7 @@
 
     <div class="cabecalho">
         <div class="logo">
-            <img src="/pages/img/logo.jfif" alt="">
+            <img src="/img/logo.jfif" alt="">
         </div>
         <div class="opcoes">
             <a href="/index.jsp">INÍCIO</a>
@@ -27,7 +27,7 @@
         <div class="acoes">
             <a href="/"><img src="/img/lupa.png" alt=""></a>
             <a href="/login.jsp"><img src="/img/perfil.png" alt=""></a>
-            <a href="/carrinho.jsp"><img src="/pages/img/sacola.png" alt=""></a>
+            <a href="/carrinho.jsp"><img src="/img/sacola.png" alt=""></a>
         </div>
     </div>
 

@@ -41,7 +41,7 @@
     <div class="carousel-inner">
 
         <div class="carousel-item active">
-            <img src="img/png/banner.png" class="d-block w-100" alt="...">
+            <img src="img/banner.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
 
