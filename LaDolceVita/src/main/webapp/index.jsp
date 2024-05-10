@@ -11,26 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        a:link{
-            color: #FFB6C1;
-            text-decoration: none;
-        }
-        a:visited{
-            color: #FFB6C1;
-        }
-        a:hover{
-            text-decoration: underline;
-            background-color: #FFE7EA;
-        }
 
-
-    </style>
     <title>Início</title>
 </head>
 
 <body>
-
+    <%@ include file="/Componentes/cabecalho.jsp" %>
                           <div class="row">
                               <div class="col"></div>
                               <div class="col-md-auto"></div>
@@ -43,49 +29,6 @@
                               </div>
                             </div>
                           </div>
-
-
-
-
-<div class="aviso">
-    <div class="comunicado">FAÇA AGORA SEU PEDIDO ONLINE</div>
-</div>
-
-<div class="cabecalho">
-    <div class="logo">
-        <img src="img/logo.jfif" alt="">
-    </div>
-
-    <div class="menu menu-topo">
-        <div class="text-center">
-
-            <a href="index.jsp" class="btn btn btn-menu"><strong> INÍCIO</strong></a>
-            <a href="menu.jsp" class="btn btn btn-menu"><strong> MENU</strong></a>
-            <a href="#" class="btn btn btn-menu"><strong> SOBRE</strong></a>
-            <a href="#" class="btn btn btn-menu"><strong> CONTATO</strong></a>
-
-        </div>
-    </div>
-
-        <div class="acoes ">
-
-            <a href="#">
-                <img src="img/png/lupa.png" alt="">
-            </a>
-
-            <a href="#">
-                <img src="img/png/user.png" alt="">
-            </a>
-
-            <a href="#">
-                <img src="img/png/sacola.png" alt="">
-            </a>
-
-            </div>
-    </div>
-        </div>
-
-<div class="linha"></div>
 
 
 <div id="carouselExampleCaptions" class="carousel slide">
