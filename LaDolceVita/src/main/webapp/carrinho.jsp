@@ -12,115 +12,122 @@
     />
   </head>
   <body>
+<<<<<<< Updated upstream
   <span>${sessioScoped.id}</span>
               <input type="hidden" id="" name="" valeu="${sessionScoped.id}">
+=======
+>>>>>>> Stashed changes
     <main>
-      <div class="page-title">Seu Carrinho</div>
+      <div class="title">CARRINHO</div>
       <div class="content">
-        <section>
-          <table>
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Total</th>
-                <th>-</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/fotobolo2.png" alt="" />
-                    <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
-                    </div>
+        <div class="parte1">
+            <section>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th>-</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="product">
+                        <img src="img/bolocarrinho.png" alt="" />
+                        <div class="info">
+                          <div class="name">Nome do produto</div>
+                          <div class="category">Categoria</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>R$ 120</td>
+                    <td>
+                      <div class="qty">
+                        <button><i class="bx bx-minus"></i></button>
+                        <span>2</span>
+                        <button><i class="bx bx-plus"></i></button>
+                      </div>
+                    </td>
+                    <td>R$ 240</td>
+                    <td>
+                      <button class="remove"><i class="bx bx-x"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product">
+                        <img src="img/bolocarrinho.png" alt="" />
+                        <div class="info">
+                          <div class="name">Nome do produto</div>
+                          <div class="category">Categoria</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>R$ 120</td>
+                    <td>
+                      <div class="qty">
+                        <button><i class="bx bx-minus"></i></button>
+                        <span>2</span>
+                        <button><i class="bx bx-plus"></i></button>
+                      </div>
+                    </td>
+                    <td>R$ 240</td>
+                    <td>
+                      <button class="remove"><i class="bx bx-x"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product">
+                        <img src="img/bolocarrinho.png" alt="" />
+                        <div class="info">
+                          <div class="name">Nome do produto</div>
+                          <div class="category">Categoria</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>R$ 120</td>
+                    <td>
+                      <div class="qty">
+                        <button><i class="bx bx-minus"></i></button>
+                        <span>2</span>
+                        <button><i class="bx bx-plus"></i></button>
+                      </div>
+                    </td>
+                    <td>R$ 240</td>
+                    <td>
+                      <button class="remove"><i class="bx bx-x"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+        <div class="parte2">
+            <div class="title">RESUMO DA COMPRA</div>
+            <aside>
+              <div class="box">
+                <div class="info">
+                  <div><span>Sub-total</span><span>R$ 418</span></div>
+                  <div><span>Frete</span><span>Gratuito</span></div>
+                  <div>
+                    <button>
+                      Adicionar cupom de desconto
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
                   </div>
-                </td>
-                <td>R$ 120</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>R$ 240</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/fotobolo2.png" alt="" />
-                    <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
-                    </div>
-                  </div>
-                </td>
-                <td>R$ 120</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>R$ 240</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="img/fotobolo2.png" alt="" />
-                    <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
-                    </div>
-                  </div>
-                </td>
-                <td>R$ 120</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>R$ 240</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <aside>
-          <div class="box">
-            <header>Resumo da compra</header>
-            <div class="info">
-              <div><span>Sub-total</span><span>R$ 418</span></div>
-              <div><span>Frete</span><span>Gratuito</span></div>
-              <div>
-                <button>
-                  Adicionar cupom de desconto
-                  <i class="bx bx-right-arrow-alt"></i>
-                </button>
+                </div>
+                <footer>
+                  <span>Total</span>
+                  <span>R$ 418</span>
+                </footer>
               </div>
-            </div>
-            <footer>
-              <span>Total</span>
-              <span>R$ 418</span>
-            </footer>
-          </div>
-          <button>Finalizar Compra</button>
-        </aside>
+              <button>Finalizar Compra</button>
+            </aside>
+        </div>
       </div>
     </main>
   </body>

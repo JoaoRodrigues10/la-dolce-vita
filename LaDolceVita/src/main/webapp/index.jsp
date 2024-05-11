@@ -41,22 +41,22 @@
     <div class="carousel-inner">
 
         <div class="carousel-item active">
+            <img src="/img/banner.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="/img/banner.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
             <img src="img/banner.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-
-
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <img src="img/png/banner.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <img src="img/png/banner.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
@@ -141,7 +141,7 @@
 
     <div class="col-md-2">
         </br>
-        <a href=""><img src="img/png/bolo2.png" alt=""></a>
+        <a href=""><img src="img/bolo2.png" alt=""></a>
     </div>
 
     <div class="col-md-4 offset-md-4"></br></br>
@@ -228,68 +228,7 @@
 
 
 
-
-
-
-
-
-<div class="linha" id="rodape"></div>
-
-<div class="rodape">
-    <div class="r1">
-        <img src="img/logo.jfif" alt="">
-        <div class="social-media text-center">
-            <ul class="list-social-media">
-                <a class="link-social-media" href="#">
-
-                    <li class="item-social-media">
-                        <i class="fab fa-facebook-f"></i>
-                    </li>
-
-                </a>
-
-                <a class="link-social-media" href="#">
-                    <li class="item-social-media">
-                        <i class="fab fa-google-plus-g"></i>
-                    </li>
-                </a>
-
-                <a class="link-social-media" href="#">
-                    <li class="item-social-media">
-                        <i class="fab fa-linkedin-in"></i>
-                    </li>
-                </a>
-            </ul>
-        </div>
-        <div class="confeitaria">Desde 2000 - Confeitaria La Dolce Vita</div>
-    </div>
-    <div class="r2">
-        <div class="rtitulo">HOME PAGE</div>
-        <div class="ropcoes">LOJA ONLINE</div>
-        <div class="ropcoes">SOBRE</div>
-        <div class="ropcoes">MINHA CONTA</div>
-        <div class="ropcoes">CONTATO</div>
-    </div>
-    <div class="r3">
-        <div class="r3titulo">CONTATO</div>
-        <div class="rcombo">
-            <div class="subinfo">Delivery</div>
-            <div class="info">(11) 9 9429-9161</div>
-        </div>
-        <div class="rcombo">
-            <div class="subinfo">Eventos</div>
-            <div class="info">(11) 9 9429-9161</div>
-        </div>
-        <div class="rcombo">
-            <div class="subinfo">Trabelhe conosco</div>
-            <div class="info">recrutamento@ladolcevita.com.br</div>
-        </div>
-    </div>
-</div>
-
-<div class="aviso">
-    <div class="comunicado">WWW.LADOLCEVITA.COM.BR</div>
-</div>
+<%@ include file="/Componentes/rodape.jsp" %>
 
 </body>
 </html>
