@@ -6,6 +6,7 @@ br\com\LaDolceVita\servlet\CreateProdutoServlet.class
 br\com\LaDolceVita\model\ItensPedido.class
 br\com\LaDolceVita\config\ConnectionPoolConfig.class
 br\com\LaDolceVita\servlet\ListProdutoServlet.class
+br\com\LaDolceVita\servlet\ListProdutoCategoria.class
 br\com\LaDolceVita\model\Produto.class
 br\com\LaDolceVita\servlet\CreateEnderecoServlet.class
 br\com\LaDolceVita\model\Pedido.class

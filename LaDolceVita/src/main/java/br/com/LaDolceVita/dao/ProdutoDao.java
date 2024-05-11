@@ -77,6 +77,54 @@ public class ProdutoDao {
         }
     }
 
+
+    public List<Produto> findAllProdutosCategoria(String categoria){
+
+        String SQL = "SELECT * FROM PRODUTOS where CATEGORIA = ?";
+
+
+
+        try {
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, categoria);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<Produto> produtos = new ArrayList<>();
+
+            while (resultSet.next()) {
+
+                String produtoId = resultSet.getString("ID_PRODUTO");
+                String produtoName = resultSet.getString("NOME");
+                String produtoCategoria = resultSet.getString("CATEGORIA");
+                String produtoDescricao = resultSet.getString("DESCRICAO");
+                String preco = resultSet.getString("PRECO");
+                BigDecimal precoProduto = new BigDecimal(preco);
+
+                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
+
+                produtos.add(produto);
+
+            }
+
+            System.out.println("success in select * produto");
+
+            connection.close();
+
+            return produtos;
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
+            return Collections.emptyList();
+
+        }
+    }
+
     public void deleteProdutoById(String produtoId){
 
         String SQL = "DELETE PRODUTOS WHERE ID_PRODUTO = ?";

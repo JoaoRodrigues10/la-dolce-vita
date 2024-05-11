@@ -12,7 +12,8 @@
     />
   </head>
   <body>
-
+  <span>${sessioScoped.id}</span>
+              <input type="hidden" id="" name="" valeu="${sessionScoped.id}">
     <main>
       <div class="page-title">Seu Carrinho</div>
       <div class="content">

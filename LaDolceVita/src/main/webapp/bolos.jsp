@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
+
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,84 +17,21 @@
     <div class="titulo">BOLOS</div>
 
     <div class="conteudo">
-        <div class="parte">
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-        </div>
-        <div class="parte">
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-        </div>
-        <div class="parte">
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-            <div class="box">
-                <img src="../../img/bolo.jfif" alt="">
-                <div class="nome">Naked Cake</div>
-                <div class="linhaP"></div>
-                <div class="valor">130,00</div>
-            </div>
-        </div>
+
+
+            <c:forEach var="categoria" items="${categorias}">
+
+                <div class="box">
+                    <img src="../../img/bolo.jfif" alt="">
+                    <div class="nome">${categoria.name}</div>
+                    <div class="linhaP"> </div>
+                    <div class="valor">${categoria.preco}</div>
+                </div>
+
+            </c:forEach>
+
+
+
     </div>
 
     <%@ include file="/Componentes/rodape.jsp" %>

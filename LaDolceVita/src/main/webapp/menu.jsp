@@ -16,7 +16,7 @@
 
     <div class="conteudo">
         <div class="parte1">
-            <a href="/bolos.jsp">
+            <a href="/find-all-categorias?categoria=Bolo">
                 <div class="box-bolo">
                     <div class="bolos">BOLOS</div>
                 </div>
