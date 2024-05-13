@@ -16,7 +16,7 @@ public class ProdutoDao {
 
     public void createProduto(Produto produto){
 
-        String SQL = "INSERT INTO PRODUTOS (NOME, CATEGORIA, DESCRICAO, PRECO) VALUES (?, ?, ?, ?)";
+        String SQL = "INSERT INTO PRODUTOS (NOME, CATEGORIA, DESCRICAO, PRECO, IMAGE) VALUES (?, ?, ?, ?, ?)";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
@@ -25,6 +25,7 @@ public class ProdutoDao {
             preparedStatement.setString(2, produto.getCategoria());
             preparedStatement.setString(3, produto.getDescricao());
             preparedStatement.setBigDecimal(4,produto.getPreco());
+            preparedStatement.setString(5, produto.getImage());
             preparedStatement.execute();
             System.out.println("success in insert command");
             connection.close();
@@ -55,8 +56,9 @@ public class ProdutoDao {
                 String produtoDescricao = resultSet.getString("DESCRICAO");
                 String preco = resultSet.getString("PRECO");
                 BigDecimal precoProduto = new BigDecimal(preco);
+                String imagemproduto = resultSet.getString("IMAGE");
 
-                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
+                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto,imagemproduto);
 
                 produtos.add(produto);
 
@@ -103,8 +105,9 @@ public class ProdutoDao {
                 String produtoDescricao = resultSet.getString("DESCRICAO");
                 String preco = resultSet.getString("PRECO");
                 BigDecimal precoProduto = new BigDecimal(preco);
+                String imagemproduto = resultSet.getString("IMAGE");
 
-                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto);
+                Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto, imagemproduto);
 
                 produtos.add(produto);
 
@@ -150,7 +153,7 @@ public class ProdutoDao {
 
     public void updateProduto(Produto produto){
 
-        String SQL = "UPDATE PRODUTOS SET NOME = ?, CATEGORIA = ?, DESCRICAO = ?, PRECO = ?  WHERE ID_PRODUTO = ?";
+        String SQL = "UPDATE PRODUTOS SET NOME = ?, CATEGORIA = ?, DESCRICAO = ?, PRECO = ?, IMAGE = ?  WHERE ID_PRODUTO = ?";
 
         try {
 
@@ -162,7 +165,8 @@ public class ProdutoDao {
             preparedStatement.setString(2, produto.getCategoria());
             preparedStatement.setString(3, produto.getDescricao());
             preparedStatement.setBigDecimal(4, produto.getPreco());
-            preparedStatement.setString(5, produto.getId());
+            preparedStatement.setString(5, produto.getImage());
+            preparedStatement.setString(6, produto.getId());
             preparedStatement.execute();
 
             System.out.println("success in update produto");

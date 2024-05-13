@@ -21,12 +21,12 @@
                     <div class="bolos">BOLOS</div>
                 </div>
             </a>
-            <a href="/tortas.jsp">
+            <a href="/find-all-categorias?categoria=Torta">
                 <div class="box-torta">
                     <div class="tortas">TORTAS</div>
                 </div>
             </a>
-            <a href="/gateaus.jsp">
+            <a href="/find-all-categorias?categoria=Gateau">
                 <div class="box-gateau">
                     <div class="gateaus">GATEAUS</div>
                 </div>

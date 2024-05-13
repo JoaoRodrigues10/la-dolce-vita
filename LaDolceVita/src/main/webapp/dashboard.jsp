@@ -33,6 +33,7 @@
                     <td>${produto.categoria}</td>
                     <td>${produto.descricao}</td>
                     <td>${produto.preco}</td>
+                    <td><img src="/img/${produto.image}"></td>
                         <c:if test="${sessionScope.loggedUser != null}">
                             <td>
                                 <form action="/delete-produto" method="post">

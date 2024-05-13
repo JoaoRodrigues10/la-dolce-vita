@@ -29,7 +29,7 @@ public class ListProdutoCategoria extends HttpServlet {
         req.setAttribute("categorias", allProdutosCategoria);
 
         // aqui é defindo para qual página o usuário será direcionado
-        req.getRequestDispatcher("/bolos.jsp").forward(req, resp);
+        req.getRequestDispatcher("/produtos.jsp").forward(req, resp);
 
 
     }

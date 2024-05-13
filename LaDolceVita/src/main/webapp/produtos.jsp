@@ -7,14 +7,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet"href= "/css/bolos.css">
-    <title>Bolos</title>
+    <link  rel="stylesheet"href= "/css/produtos.css">
+    <title></title>
 </head>
 
 <body>
     <%@ include file="/Componentes/cabecalho.jsp" %>
 
-    <div class="titulo">BOLOS</div>
+    <c:forEach var="categoria" items="${categorias}" varStatus="loop">
+           <c:if test="${loop.first and categoria.id > 0}">
+               <div class="titulo">${categoria.categoria}</div>
+           </c:if>
+       </c:forEach>
 
     <div class="conteudo">
 
@@ -22,9 +26,9 @@
             <c:forEach var="categoria" items="${categorias}">
 
                 <div class="box">
-                    <img src="../../img/bolo.jfif" alt="">
+                    <img src="../../img/${categoria.image}" alt="">
                     <div class="nome">${categoria.name}</div>
-                    <div class="linhaP"> </div>
+                    <div class="linhaP">  </div>
                     <div class="valor">${categoria.preco}</div>
                 </div>
 

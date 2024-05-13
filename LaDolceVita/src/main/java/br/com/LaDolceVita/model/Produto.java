@@ -9,20 +9,23 @@ public class Produto {
     private String categoria;
     private String descricao;
     private BigDecimal preco;
+    private String image;
 
-    public Produto(String id, String name, String categoria, String descricao, BigDecimal preco) {
+    public Produto(String id, String name, String categoria, String descricao, BigDecimal preco , String image) {
         this.id = id;
         this.name = name;
         this.categoria = categoria;
         this.descricao = descricao;
         this.preco = preco;
+        this.image = image;
     }
 
-    public Produto(String name, String categoria, String descricao, BigDecimal preco) {
+    public Produto(String name, String categoria, String descricao, BigDecimal preco, String image) {
         this.name = name;
         this.categoria = categoria;
         this.descricao = descricao;
         this.preco = preco;
+        this.image = image;
     }
 
     public String getId() {
@@ -46,4 +49,6 @@ public class Produto {
     public String getCategoria() {
         return categoria;
     }
+
+    public String getImage() {return image;}
 }
