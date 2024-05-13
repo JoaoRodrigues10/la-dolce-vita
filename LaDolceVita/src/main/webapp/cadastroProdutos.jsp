@@ -9,7 +9,11 @@
     <input type="text" name="name-produto" id="name-produto" value="${param.name}">
     <input type="hidden" id="id" name="id" value="${param.id}">
     <label>Categoria</label>
-    <input type="text" name="categoria-produto" id="categoria-produto" value="${param.categoria}">
+    <select name="categoria-produto" id="categoria-produto">
+                <option value="Bolo" ${param.categoria == 'Bolo' ? 'selected' : ''}>Bolo</option>
+                <option value="Torta" ${param.categoria == 'Torta' ? 'selected' : ''}>Torta</option>
+                <option value="Gateau" ${param.categoria == 'Gateau' ? 'selected' : ''}>Gateau</option>
+    </select>
     <label>Descricao</label>
     <input type="text" name="descricao-produto" id="descricao-produto" value="${param.descricao}">
     <label>Preco</label>
