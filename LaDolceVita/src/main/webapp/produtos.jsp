@@ -8,7 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"href= "/css/produtos.css">
-    <title></title>
+    <title>
+        <c:forEach var="categoria" items="${categorias}" varStatus="loop">
+          <c:if test="${loop.first and categoria.id > 0}">
+              ${categoria.categoria}
+          </c:if>
+        </c:forEach>
+    </title>
 </head>
 
 <body>
