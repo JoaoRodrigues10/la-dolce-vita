@@ -14,19 +14,19 @@
 
     <div class="rodape">
         <div class="r1">
-            <img src="/pages/img/logo.jfif" alt="">
+            <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
             <div class="icones">
-                <div class="fundo">
-                    <img src="/pages/img/whatsapp.png" alt="">
+                <div class="fundo" onclick="window.location.href='https://web.whatsapp.com/'">
+                    <img src="/img/whatsapp.png" alt="">
                 </div>
-                <div class="fundo">
-                    <img src="/pages/img/linkedin.png" alt="">
+                <div class="fundo" onclick="window.location.href='https://www.linkedin.com/feed/'">
+                    <img src="/img/linkedin.png" alt="">
                 </div>
-                <div class="fundo">
-                    <img src="/pages/img/instagram.png" alt="">
+                <div class="fundo" onclick="window.location.href='https://www.instagram.com/'">
+                    <img src="/img/instagram.png" alt="">
                 </div>
-                <div class="fundo">
-                    <img src="/pages/img/facebook.png" alt="">
+                <div class="fundo" onclick="window.location.href='https://www.facebook.com/'">
+                    <img src="/img/facebook.png" alt="">
                 </div>
             </div>
             <div class="confeitaria">Desde 2000 - Confeitaria La Dolce Vita</div>
@@ -56,7 +56,7 @@
     </div>
 
     <div class="aviso">
-        <div class="comunicado">WWW.LADOLCEVITA.COM.BR</div>
+        <div class="comunicado" onclick="window.location.href='/index.jsp'">WWW.LADOLCEVITA.COM.BR</div>
     </div>
 
 </body>

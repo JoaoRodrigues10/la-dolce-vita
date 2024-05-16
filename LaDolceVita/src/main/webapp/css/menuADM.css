@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Abhaya Libre';
+    height: 100vh;
+}
+
+.container {
+            height: 80%; /* Largura da área de conteúdo */
+            text-align: center; /* Centraliza o conteúdo interno horizontalmente */
+        }
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.linha {
+    border-top: 3px solid #FFC2CB;
+    width: 100%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin: 60px;
+    color: #FFC2CB !important;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 33em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parte1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.parte1 a {
+    text-decoration: none !important;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #FFE7EA;
+    background-size: cover;
+    background-position: center;
+    margin: 0px 2em 2em 2em;
+    width: 19em;
+    height: 25em;
+}
+
+.descricao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 80%);
+    padding: 7px;
+    font-size: 30px;
+    color: black !important;
+    margin-bottom: 1.5em;
+}
+
+.aviso {
+    background-color: #FFDBE0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.comunicado {
+    font-size: 15px;
+}

@@ -1,221 +1,279 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background: #f6f6f6;
-  font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-family: 'Abhaya Libre';
 }
 
-body > header {
-  background: #111;
-  color: white;
-  font-size: 24px;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-body > main {
-  background: #fff;
-  padding: 0 30px 30px;
-}
-
-body > main .title {
+.aviso {
+    background-color: #FFDBE0;
+    padding: 10px;
     display: flex;
-      justify-content: center;
-      font-size: 70px;
-      margin: 25px;
-      color: #FFC2CB !important;
+    justify-content: center;
 }
 
-body > main .content {
-  display: flex;
-  justify-content: center;
+.comunicado {
+    font-size: 15px;
 }
 
-.parte1, .parte2 {
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+}
+
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+}
+
+.opcoes a {
+    font-size: 25px;
+    margin: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+}
+
+.acoes img {
+    margin: 0px 10px;
+    width: 25px;
+    height: auto;
+}
+
+.linha {
+    border-top: 3px solid #FFC2CB;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin: 25px;
+    color: #FFC2CB !important;
+}
+
+.conteudo {
     display: flex;
     flex-direction: column;
-}
-
-body > main .content section {
-  flex: 1;
-}
-
-body > main .content aside {
-  min-width: 250px;
-}
-
-button {
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
-table thead tr {
-  border-bottom: 3px solid #eee;
+th {
+    font-size: 20px;
+    padding: 0em 1.5em 1.5em;
+    text-align: left;
+    border-bottom: 2px solid #FFC2CB;
+    text-align: center;
 }
 
-table thead tr th {
-  text-align: left;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  color: #666;
+th .pro {
+    text-align: left;
 }
 
-table tbody tr {
-  border-bottom: 3px solid #eee;
+td {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid #FFC2CB;
 }
 
-table tbody tr:last-child {
-  border: 0;
+.detalhe {
+    padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
 }
 
-table tbody tr td {
-  padding: 30px 0;
+.img {
+    width: 5em;
+    height: 5em;
+    margin-right: 20px;
+    border-radius: 25%;
 }
 
-.product {
-  display: flex;
-  align-items: center;
+.info {
+    flex-grow: 1;
+    text-align: left;
 }
 
-.product img {
-  border-radius: 6px;
-  width: 100px;
-  height: 120px;
+.info-produto {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Abhaya Libre';
+    margin: 0px 200px 10px 0px;
 }
 
-.product .info {
-  margin-left: 20px;
+.qtd-bot {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #FFDBE0;
+    border: none;
+    border-radius: 20px;
 }
 
-.product .info .name {
-  font-size: 20px;
-  margin-bottom: 10px;
+.remover {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #FFDBE0;
+    border: none;
+    border-radius: 50px;
 }
 
-.product .info .category {
-  color: #666;
+.box {
+    justify-content: center;
+    background-color: #FFDBE0;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
 }
 
-.qty {
-  background: #eee;
-  display: inline-flex;
-  padding: 0 0;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 60px;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 30px;
+.par {
+
 }
 
-.qty span {
-  margin: 0 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 1em 13em;
 }
 
-.qty button {
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: 0;
-  padding: 0 10px;
-  font-size: 20px;
-  height: 100%;
+.r1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.qty button:hover {
-  background: #ddd;
+.r1 img {
+    width: 180px;
+    height: auto;
 }
 
-.remove {
-  background: #eee;
-  border: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+.icones {
+    display: flex;
+    flex-direction: row;
 }
 
-.remove:hover {
-  background: #ddd;
+.icones img {
+    margin: 0px 10px;
+    width: 2em;
+    height: auto;
+    padding: 0px 0px;
 }
 
-aside {
-  margin-left: 30px;
+.fundo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC2CB;
+    width: 3em;
+    height: 3em;
+    border-radius: 50px 50px;
+    margin: 25px 4px 30px;
 }
 
-aside .box {
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #222;
+.confeitaria {
+    font-size: 20px;
 }
 
-aside .box header {
-  padding: 15px 20px;
-  font-size: 18px;
-  border-bottom: 1px solid #ccc;
+.rtitulo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0px 15px;
 }
 
-aside .box .info {
-  padding: 20px;
-  font-size: 16px;
+.ropcoes {
+    font-size: 20px;
+    margin: 0px 0px 15px;
 }
 
-aside .box .info > div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  color: #555;
+.r3titulo {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0px 10px;
 }
 
-aside .box .info > div:last-child {
-  margin: 0;
+.rcombo {
+    padding-bottom: 5px;
 }
 
-aside .box .info button {
-  color: #28a745;
-  background: transparent;
-  border: 0;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
+.subinfo {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-aside .box footer {
-  padding: 15px 20px;
-  background: #ddd;
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-}
-
-aside > button {
-  border: 0;
-  padding: 15px 0;
-  color: white;
-  background: #28a745;
-  display: block;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 16px;
-}
-
-aside > button:hover {
-  background: #3bc55b;
+.info {
+    font-size: 20px;
 }

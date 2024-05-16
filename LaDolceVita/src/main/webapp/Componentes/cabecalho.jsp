@@ -16,7 +16,7 @@
 
     <div class="cabecalho">
         <div class="logo">
-            <img src="/img/logo.jfif" alt="">
+            <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
         </div>
         <div class="opcoes">
             <a href="/index.jsp">INÍCIO</a>
@@ -25,7 +25,7 @@
             <a href="#rodape">CONTATO</a>
         </div>
         <div class="acoes">
-            <a href="/"><img src="/img/lupa.png" alt=""></a>
+            <a href="/menuADM.jsp"><img src="/img/lupa.png" alt=""></a>
             <a href="/login.jsp"><img src="/img/perfil.png" alt=""></a>
             <a href="/carrinho.jsp"><img src="/img/sacola.png" alt=""></a>
         </div>
