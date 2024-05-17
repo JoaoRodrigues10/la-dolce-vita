@@ -1,0 +1,51 @@
+.corpo{
+    margin: 250px;
+    font-family: 'Abhaya Libre';
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.table{
+
+    justify-content: center;
+    align-items: center;
+
+}
+.card {
+        padding:15px;
+        background-color:#ADD8E6;
+        border-radius: 30px;
+        justify-content: center;
+         align-items: center;
+}
+.card > h1{
+        color: #E4F2F7;
+        border-radius: 30px;
+}
+.aviso {
+    background-color: #ADD8E6;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-custom {
+        border-color: #ADD8E6;
+        background: #FFFFFF;
+        padding: 7px;
+        border-radius: 50px;
+        width: 100px;
+        height: 30  px;
+}
+.btn-custom:hover{
+    color: #FFFFFF;
+    background: #E4F2F7;
+    border-color: #ADD8E6;
+
+}
+
+.img {
+    width: 20px;
+    height: 20px;
+
+}

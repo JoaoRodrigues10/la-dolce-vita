@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<html lang="en">
+<html>
 
 <head>
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet"href= "css/menu.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  rel="stylesheet"href= "css/menu.css">
 
     <title>Início</title>
 </head>
@@ -79,7 +79,7 @@
 
     <div class="row">
         <div class="col">
-            <h2>Horario</h2>
+            <h2>Horário</h2>
             </br>
             <h3><small class="text-body-secondary">TODOS OS DIAS. DAS 10H AS 22H.</small></h3>
         </div>
@@ -127,7 +127,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-8 offset-md-3"><h2>VALORES</h2>
+        <div class="col-md-8 offset-md-2"><h2>VALORES</h2>
             </br>
             <h5>Comprometemo-nos com qualidade em cada etapa do processo, desde a escolha dos ingredientes até a apresentação final dos produtos. Incentivamos a inovação e
                 originalidade para surpreender nossos clientes. Amamos o que fazemos, dedicando energia para criar experiências deliciosas. Agimos com honestidade,
@@ -158,8 +158,8 @@
         </br>
 
         <p>
-            <a href="#" class="btn btn-primary btn-custom">
-                <strong> Compre já!</strong>
+            <a href="menu.jsp" class="btn btn-custom">
+                <strong> Compre ja!</strong>
             </a>
         </p>
 
@@ -183,7 +183,7 @@
                 <BR><BR>
                 Rua dos Girassóis, 123
                 <br> (11) 9876-5432
-                <br> <br><a href="https://www.google.com/maps/place/R.+dos+Girass%C3%B3is,+123+-+Parque+Fernanda,+S%C3%A3o+Paulo+-+SP,+05887-370/@-23.6754862,-46.7944333,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5303659edac5:0x5d25d502d14fcef0!8m2!3d-23.6754862!4d-46.7944333?entry=ttu" class="btn btn-primary btn-maps">
+                <br> <br><a href="https://www.google.com/maps/place/R.+dos+Girass%C3%B3is,+123+-+Parque+Fernanda,+S%C3%A3o+Paulo+-+SP,+05887-370/@-23.6754862,-46.7944333,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5303659edac5:0x5d25d502d14fcef0!8m2!3d-23.6754862!4d-46.7944333?entry=ttu" class="btn btn-maps">
                 Maps
             </a>
             </div>
@@ -194,7 +194,7 @@
                 <BR><BR>
                 Avenida das Palmeiras, 456
                 <br> (11) 7654-3210
-                <br> <br><a href="#" class="btn btn-primary btn-maps">
+                <br> <br><a href="#" class="btn btn-maps">
                 Maps
             </a>
             </div>
@@ -205,7 +205,7 @@
                 <BR><BR>
                 Travessa das Acácias, 789
                 <br> (11) 8765-4321
-                <br> <br><a href="#" class="btn btn-primary btn-maps">
+                <br> <br><a href="#" class="btn btn-maps">
                 Maps
             </a>
             </div>
@@ -228,7 +228,9 @@
 
 
 
-<%@ include file="/Componentes/rodape.jsp" %>
+<%@ include file= "/Componentes/rodape.jsp" %>
+
+
 
 </body>
 </html>

@@ -42,6 +42,7 @@
     <input type="file" name="image" id="image">
 
     <div class="botao">
+   <a href="menuADM.jsp"> VOLTAR AO MENU</a>
     <button type="submit">ADICIONAR</button>
     </div>
 </form>

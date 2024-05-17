@@ -9,6 +9,13 @@ body {
     display: flex;
     justify-content: center;
 }
+.aviso2 {
+
+    background-color: #FFDBE0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+}
 
 .comunicado {
     font-size: 15px;
@@ -51,21 +58,24 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #FFDBE0;
-    width: 3em;
-    height: 3em;
+    width: 1em;
+    height: 1em;
     border-radius: 50px 50px;
     margin: 25px 4px 30px;
 }
+
 
 .confeitaria {
     font-size: 20px;
 }
 
 .rtitulo {
+color: #FF00FF
     font-size: 30px;
     font-weight: bold;
     margin: 10px 0px 15px;
 }
+
 
 .ropcoes {
     font-size: 20px;

@@ -1,4 +1,4 @@
-body {
+.body {
     margin: 0;
     font-family: 'Abhaya Libre';
 }
@@ -292,9 +292,9 @@ body {
 }
 
 .btn-maps{
+    text-color: #FFB6C1;
     border-color: #FFB6C1;
-    background: #FFFFFF;
-
+    background: #FFE7EA;
     border-radius: 50px;
     width: 90px;
     height: 35px;
@@ -302,12 +302,69 @@ body {
 
 }
 .btn-maps:hover{
-    color: #FFFFFF;
+    color: #FFB6C1;
     background: #FFE7EA;
     border-color: #FFB6C1
 
 }
 
+.social-media {
+
+    margin: 1rem 0;
+}
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s;
+}
+.link-social-media:hover .item-social-media{
+    background-color: #FFB6C1;
+    color: #fff;
+    border-color:#FFB6C1;
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+
+}
+.item-social-media {
+    border: 1px solid #FFB6C1;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #212529;
+}
+.btn-custom{
+    border-color: #FFB6C1;
+    background: #FFFFFF;
+    padding: 7px;
+    border-radius: 50px;
+    width: 120px;
+    height: 45px;
+}
+.btn-custom:hover{
+    color: #FFFFFF;
+    background: #FFE7EA;
+    border-color: #FFB6C1
+}
+
+.btn-menu {
+    border: 0px;
+    background: #FFFFFF;
+    padding: 10px;
+
+    width: 120px;
+    height: 45px;
+}
+.btn-menu:hover{
+    color: #FFFFFF;
+    background: #FFE7EA;
+    border-color: #FFB6C1
+
+}
 
 .social-media {
 

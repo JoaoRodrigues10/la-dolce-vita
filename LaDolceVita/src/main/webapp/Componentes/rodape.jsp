@@ -16,27 +16,26 @@
         <div class="r1">
             <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
             <div class="icones">
-                <div class="fundo" onclick="window.location.href='https://web.whatsapp.com/'">
-                    <img src="/img/whatsapp.png" alt="">
+                <div class="btn fundo">
+                    <i class="fa-brands fa-whatsapp"></i>
                 </div>
-                <div class="fundo" onclick="window.location.href='https://www.linkedin.com/feed/'">
-                    <img src="/img/linkedin.png" alt="">
+                <div class="btn fundo">
+                    <i class="fa-brands fa-linkedin-in"></i>
                 </div>
-                <div class="fundo" onclick="window.location.href='https://www.instagram.com/'">
-                    <img src="/img/instagram.png" alt="">
+                <div class="btn fundo">
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div class="fundo" onclick="window.location.href='https://www.facebook.com/'">
-                    <img src="/img/facebook.png" alt="">
+                <div class="btn fundo">
+                    <i class="fa-brands fa-facebook-f"></i>
                 </div>
             </div>
             <div class="confeitaria">Desde 2000 - Confeitaria La Dolce Vita</div>
         </div>
         <div class="r2">
             <div class="rtitulo">HOME PAGE</div>
-            <div class="ropcoes">LOJA ONLINE</div>
-            <div class="ropcoes">SOBRE</div>
-            <div class="ropcoes">MINHA CONTA</div>
-            <div class="ropcoes">CONTATO</div>
+            <a href="menu.jsp"><div class="ropcoes">MENU</div></a>
+            <a href="index.jsp#sobre"><div class="ropcoes">SOBRE</div></a>
+            <a href="index.jsp#rodape"><div class="ropcoes">CONTATO</div></a>
         </div>
         <div class="r3">
             <div class="r3titulo">CONTATO</div>
@@ -57,7 +56,12 @@
 
     <div class="aviso">
         <div class="comunicado" onclick="window.location.href='/index.jsp'">WWW.LADOLCEVITA.COM.BR</div>
+
     </div>
+    <div>
+    <div class="aviso2">Copyright © 2024 LA DOLCE VITTA  - Desenvolvido por SenacTeam.</div>
+    </div>
+
 
 </body>
 </html>
