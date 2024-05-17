@@ -175,3 +175,34 @@ body {
 .info {
     font-size: 20px;
 }
+
+.btn-custom{
+    border-color: #FFB6C1;
+    background: #FFFFFF;
+    padding: 7px;
+    border-radius: 50px;
+    width: 120px;
+    height: 45px;
+}
+.btn-custom:hover{
+    color: #FFFFFF;
+    background: #FFE7EA;
+    border-color: #FFB6C1
+}
+
+a:link{
+
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color:#FFB6C1;
+background-color: transparent;
+text-decoration:none
+}
+
+a:hover{
+color:gray;
+background-color:transparent;
+
+}
