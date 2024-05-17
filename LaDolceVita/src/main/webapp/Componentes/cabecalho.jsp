@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"href= "cabecalho.css">
+    <link rel="shortcut icon" href="favicon2.png">
     <title>Cabeçalho</title>
 </head>
 
@@ -19,10 +20,10 @@
             <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
         </div>
         <div class="opcoes">
-            <a href="/index.jsp">INÍCIO</a>
-            <a href="/menu.jsp">MENU</a>
-            <a href="/index.jsp#sobre">SOBRE</a>
-            <a href="#rodape">CONTATO</a>
+            <a href="/index.jsp"><buttom class="btn btn-custom">INÍCIO</buttom></a>
+            <a href="/menu.jsp"><buttom class="btn btn-custom">MENU</buttom></a>
+            <a href="/index.jsp#sobre"><buttom class="btn btn-custom">SOBRE</buttom></a>
+            <a href="#rodape"><buttom class="btn btn-custom">CONTATO</buttom></a>
         </div>
         <div class="acoes">
             <a href="/menuADM.jsp"><img src="/img/lupa.png" alt=""></a>

@@ -292,9 +292,9 @@
 }
 
 .btn-maps{
-    text-color: #FFB6C1;
+    text-color: #FFFFFF;
     border-color: #FFB6C1;
-    background: #FFE7EA;
+    background: #FFFFFF;
     border-radius: 50px;
     width: 90px;
     height: 35px;
@@ -396,3 +396,19 @@
     color: #212529;
 }
 
+a:link{
+
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color:#FFB6C1;
+background-color: transparent;
+text-decoration:none
+}
+
+a:hover{
+color:gray;
+background-color:transparent;
+
+}

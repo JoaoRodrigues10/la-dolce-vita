@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  rel="stylesheet"href= "/css/cadastroProdutos.css">
+
     <title>Menu</title>
     <link href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
