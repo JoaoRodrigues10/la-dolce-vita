@@ -2,7 +2,6 @@
 <html lang="en">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
-
      <%@ page contentType="text/html; charset=UTF-8" %>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +39,10 @@
                     <div class="nome">${categoria.name}</div>
                     <div class="linhaP">  </div>
                     <div class="valor">${categoria.preco}</div>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="setId(${categoria.id}, '${categoria.image}', '${categoria.name}', '${categoria.preco}')">
+                            Ver Produtos
+                     </button>
+
                 </div>
 
             </c:forEach>
@@ -47,6 +50,46 @@
 
 
     </div>
+
+
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                            <div id="productName" class="nome"></div>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <input id="productId" type="hidden"></input>
+                             <img id="productImage" src="" alt="">
+                             <div id="productName" class="nome"></div>
+                             <div class="linhaP"></div>
+                             <div id="productPrice" class="valor"></div>
+                         </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Adicionar Produtos na Sacola</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+
+        function setId(id, image, name, preco) {
+            document.getElementById('productId').innerText = id;
+            document.getElementById('productImage').src = "../../img/" + image;
+            document.getElementById('productName').innerText = name;
+            document.getElementById('productPrice').innerText = preco;
+        }
+    </script>
 
     <%@ include file="/Componentes/rodape.jsp" %>
 
