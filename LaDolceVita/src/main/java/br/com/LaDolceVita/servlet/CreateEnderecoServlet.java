@@ -2,6 +2,7 @@ package br.com.LaDolceVita.servlet;
 
 import br.com.LaDolceVita.dao.ClienteDao;
 import br.com.LaDolceVita.dao.EnderecoDao;
+import br.com.LaDolceVita.model.Cliente;
 import br.com.LaDolceVita.model.Endereco;
 
 import javax.servlet.ServletException;
@@ -41,6 +42,12 @@ public class CreateEnderecoServlet extends HttpServlet {
         EnderecoDao enderecoDao = new EnderecoDao();;
 
         enderecoDao.createEndereco(endereco);
+
+        Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
+        LoginServlet loginServlet = new LoginServlet();
+        loginServlet.setClienteAutenticado(clienteAutenticado);
+        loginServlet.instaciarObjCliente(req);
+        loginServlet.setarInfosNaSessao(req);
 
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
 
