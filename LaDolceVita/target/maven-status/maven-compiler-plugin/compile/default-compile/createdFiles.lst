@@ -1,6 +1,7 @@
 br\com\LaDolceVita\dao\ClienteDao.class
 br\com\LaDolceVita\dao\ItensPedidoDao.class
 br\com\LaDolceVita\servlet\CreateClienteServlet.class
+br\com\LaDolceVita\servlet\CreateItensPedidoServlet.class
 br\com\LaDolceVita\model\Endereco.class
 br\com\LaDolceVita\servlet\CreateProdutoServlet.class
 br\com\LaDolceVita\model\ItensPedido.class
@@ -18,4 +19,5 @@ br\com\LaDolceVita\dao\EnderecoDao.class
 br\com\LaDolceVita\servlet\LogoutServlet.class
 br\com\LaDolceVita\filter\AuthenticationFilter.class
 br\com\LaDolceVita\model\ItemProduto.class
+br\com\LaDolceVita\servlet\CreatePedidoServlet.class
 br\com\LaDolceVita\servlet\DeleteProdutoServlet.class
