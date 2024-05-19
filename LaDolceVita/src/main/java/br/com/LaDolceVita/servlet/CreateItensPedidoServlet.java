@@ -1,6 +1,7 @@
 package br.com.LaDolceVita.servlet;
 
 import br.com.LaDolceVita.dao.ItensPedidoDao;
+import br.com.LaDolceVita.model.Cliente;
 import br.com.LaDolceVita.model.ItensPedido;
 import br.com.LaDolceVita.model.Produto;
 
@@ -41,6 +42,12 @@ public class CreateItensPedidoServlet extends HttpServlet {
         ItensPedidoDao itensPedidoDao = new ItensPedidoDao();
 
         itensPedidoDao.createItensPedido(itensPedido);
+
+        Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
+        LoginServlet loginServlet = new LoginServlet();
+        loginServlet.setClienteAutenticado(clienteAutenticado);
+        loginServlet.instaciarObjCliente(req);
+        loginServlet.setarInfosNaSessao(req);
 
         resp.sendRedirect("/cadastroItensPedido.html");
     }

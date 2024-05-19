@@ -70,7 +70,6 @@ public class LoginServlet extends HttpServlet {
 
         for (int i = 0; i < enderecos.size(); i++) {
             req.getSession().setAttribute("idEndereco" + i, enderecos.get(i).getId_Endereco());
-            System.out.println(req.getSession().getAttribute("idEndereco" + i));
         }
 
         for (int i = 0; i < pedidos.size(); i++){
