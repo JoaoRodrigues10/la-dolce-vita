@@ -15,12 +15,17 @@ import java.io.IOException;
 public class CreateEnderecoServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/cadastroEndereco.jsp").forward(req,resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String idDoUsuarioLogado = (String) req.getSession().getAttribute("id");
+        Integer idDoUsuarioLogado = (Integer) req.getSession().getAttribute("id");
         ClienteDao clienteDao = new ClienteDao();
 
-        String id_Cliente = idDoUsuarioLogado;
+        int id_Cliente = idDoUsuarioLogado;
         String id_Endereco = req.getParameter("id_Endereco");
         String cep = req.getParameter("cep");
         String endereco_Rua = req.getParameter("endereco_Rua");
@@ -32,18 +37,12 @@ public class CreateEnderecoServlet extends HttpServlet {
         String referencia = req.getParameter("referencia");
 
 
-        Endereco endereco = new Endereco(id_Endereco, id_Cliente, cep, endereco_Rua, cidade, bairro, estado, numero, complemento, referencia);
+        Endereco endereco = new Endereco(id_Cliente, cep, endereco_Rua, cidade, bairro, estado, numero, complemento, referencia);
         EnderecoDao enderecoDao = new EnderecoDao();;
 
-        if (id_Endereco.isBlank()) {
+        enderecoDao.createEndereco(endereco);
 
-            enderecoDao.createEndereco(endereco);
-
-
-        } else {
-
-            enderecoDao.updateEndereco(endereco);
-        }
+        req.getRequestDispatcher("/index.jsp").forward(req,resp);
 
     }
 }

@@ -5,21 +5,24 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ItensPedido {
-    private String idItensPedido;
-    private String idPedido;
+    private int idItensPedido;
+    private int idPedido;
     private List<ItemProduto> itensProduto;
 
-    public ItensPedido(String idItensPedido, String idPedido) {
+    public ItensPedido(int idItensPedido, int idPedido) {
         this.idItensPedido = idItensPedido;
         this.idPedido = idPedido;
         this.itensProduto = new ArrayList<>();
     }
 
-    public String getIdItensPedido() {
+    public ItensPedido() {
+    }
+
+    public int getIdItensPedido() {
         return idItensPedido;
     }
 
-    public String getIdPedido() {
+    public int getIdPedido() {
         return idPedido;
     }
 

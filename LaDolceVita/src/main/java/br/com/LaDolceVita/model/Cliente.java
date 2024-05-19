@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    private String id;
+    private int id;
     private String email;
     private String cpf;
     private String nome;
@@ -27,11 +27,11 @@ public class Cliente {
     }
 
     public Cliente(int id, boolean logged){
-        this.id =  String.valueOf(id);
+        this.id =  id;
         this.logged = logged;
     }
 
-    public Cliente(String id, String email, String cpf, String nome, LocalDate dataNascimento, String senha, String telefone, List<Endereco> enderecos, List<Pedido> pedidos) {
+    public Cliente(int id, String email, String cpf, String nome, LocalDate dataNascimento, String senha, String telefone, List<Endereco> enderecos, List<Pedido> pedidos) {
         this.id = id;
         this.email = email;
         this.cpf = cpf;
@@ -62,7 +62,7 @@ public class Cliente {
         pedidos.add(pedido);
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

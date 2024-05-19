@@ -26,7 +26,7 @@ public class CreateClienteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String clienteId = req.getParameter("id");
+        String clienteId= req.getParameter("id");
         String email = req.getParameter("email");
         String cpf = req.getParameter("cpf");
         String clienteNome = req.getParameter("nome-cliente");
@@ -39,8 +39,9 @@ public class CreateClienteServlet extends HttpServlet {
         LocalDate dataNascimento = LocalDate.parse(dataNascimentoString, formatter);
 
         ClienteDao clienteDao = new ClienteDao();
-        Cliente cliente = new Cliente(clienteId, email, cpf, clienteNome, dataNascimento, senha, telefone, new ArrayList<>(), new ArrayList<>());
 
+
+        Cliente cliente = new Cliente(email, cpf, clienteNome, dataNascimento, senha, telefone, new ArrayList<>(), new ArrayList<>());
 
         clienteDao.createCliente(cliente);
         req.getRequestDispatcher("/login.jsp").forward(req,resp);

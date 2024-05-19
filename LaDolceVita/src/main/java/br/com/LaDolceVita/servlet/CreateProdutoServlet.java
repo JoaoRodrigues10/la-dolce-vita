@@ -41,7 +41,8 @@ public class CreateProdutoServlet extends HttpServlet {
 
         ProdutoDao produtoDao = new ProdutoDao();
 
-        Produto produto = new Produto(produtoId, produtoName, produtoCategoria, produtoDescricao, precoProduto, image);
+
+        Produto produto = new Produto(produtoName, produtoCategoria, produtoDescricao, precoProduto, image);
 
         if (produtoId.isBlank()) {
 
