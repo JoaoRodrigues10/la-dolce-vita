@@ -99,6 +99,11 @@ body {
     margin: 5px;
 }
 
+.modal-image {
+    width: 15em;
+    height: 15em;
+}
+
 .rodape {
     display: flex;
     flex-direction: row;

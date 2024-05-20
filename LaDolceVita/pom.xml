@@ -74,6 +74,7 @@
         <version>2.1</version>
         <configuration>
           <path>/</path>
+
         </configuration>
         <executions>
           <execution>

@@ -1,9 +1,13 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href= "/css/carrinho.css">
     <link rel="stylesheet"href= "/css/rodape.css">
@@ -27,30 +31,70 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <div class="detalhe">
-                            <img src="/img/bolo.jfif" class="img">
-                            <div class="info">
-                                <div class="info-produto">Nome do Produto</div>
-                                <div>Descrição do Produto</div>
+                <c:forEach var="sacola" items="${sacolas}">
+                    <tr>
+                        <td>
+                            <div class="detalhe">
+                                <img src="../../img/${sacola.produto.image}" class="img" alt="${sacola.produto.name}">
+                                <div class="info">
+                                    <div class="info-produto">${sacola.produto.name}</div>
+                                </div>
                             </div>
-                        </div>
-                    </td>
+                        </td>
+                        <td>R$ ${sacola.produto.preco}</td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${sacola.quantidade == 1}">
+                                    <form action="/delete-sacola" method="post" style="display: inline;">
+                                        <input type="hidden" name="idsacoladelete" value="${sacola.id}">
+                                        <button class="qtd-bot" type="submit">-</button>
+                                    </form>
+                                </c:when>
+                                <c:otherwise>
+                                    <form action="/update-sacola" method="post" style="display: inline;">
+                                        <input type="hidden" name="idSacola" value="${sacola.id}">
+                                        <input type="hidden" name="quantidade" value="${sacola.quantidade - 1}">
+                                        <button class="qtd-bot" type="submit">-</button>
+                                    </form>
+                                </c:otherwise>
+                            </c:choose>
+                            <span>${sacola.quantidade}</span>
+                            <form action="/update-sacola" method="post" style="display: inline;">
+                                <input type="hidden" name="idSacola" value="${sacola.id}">
+                                <input type="hidden" name="quantidade" value="${sacola.quantidade + 1}">
+                                <button class="qtd-bot" type="submit">+</button>
+                            </form>
+                        </td>
+                        <td><fmt:formatNumber value="${sacola.produto.preco * sacola.quantidade}" type="currency" currencySymbol="R$"/></td>
+                        <td>
+                            <form action="/delete-sacola" method="post">
+                                <input type="hidden" name="idsacoladelete" value="${sacola.id}">
+                                <button type="button" class="btn btn-custom remover" data-bs-toggle="modal" data-bs-target="#modal-${sacola.id}">
+                                    X
+                                </button>
 
-                    <td>R$ 50,00</td>
-
-                    <td>
-                        <button class="qtd-bot">-</button>
-                        <span>1</span>
-                        <button class="qtd-bot">+</button>
-                    </td>
-
-                    <td>R$ 50,00</td>
-
-                    <td><button class="remover">X</button></td>
-                </tr>
-
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal-${sacola.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel-${sacola.id}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="modalLabel-${sacola.id}">ALERTA !</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Deseja realmente remover o item do carrinho?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-custom">Remover</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                </c:forEach>
             </tbody>
         </table>
 
@@ -73,10 +117,8 @@
                 <div class="result">R$ 780,00</div>
             </div>
         </div>
-
     </div>
 
     <%@ include file="/Componentes/rodape.jsp" %>
-
 </body>
 </html>
