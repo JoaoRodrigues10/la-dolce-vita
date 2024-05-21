@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href= "/css/carrinho.css">
-    <link rel="stylesheet"href= "/css/rodape.css">
+    <link rel="stylesheet" href="/css/carrinho.css">
+    <link rel="stylesheet" href="/css/rodape.css">
     <title>Doces</title>
 </head>
 
@@ -31,6 +31,7 @@
                 </tr>
             </thead>
             <tbody>
+                <c:set var="subtotal" value="0" scope="page"/>
                 <c:forEach var="sacola" items="${sacolas}">
                     <tr>
                         <td>
@@ -94,30 +95,54 @@
                             </form>
                         </td>
                     </tr>
+                    <c:set var="subtotal" value="${subtotal + (sacola.produto.preco * sacola.quantidade)}" scope="page"/>
                 </c:forEach>
             </tbody>
         </table>
 
-        <div class="titulo">RESUMO DA COMPRA<br>PRECISO TERMINAR</div>
+        <div class="titulo">RESUMO DA COMPRA</div>
 
         <div class="box">
             <div class="parte1">
                 <div class="">
                     <div class="desc">Sub-total</div>
-                    <div class="result"></div>
+                    <div class="result">
+                        <fmt:formatNumber value="${subtotal}" type="currency" currencySymbol="R$"/>
+                    </div>
                 </div>
                 <div class="par">
                     <div class="desc">Frete</div>
-                    <div class="result"></div>
+                    <div class="result">
+                        <%-- Definir o valor do frete --%>
+                        <fmt:formatNumber value="10.0" type="currency" currencySymbol="R$"/>
+                    </div>
                 </div>
                 <div class="par">Adicionar cupom de desconto</div>
             </div>
             <div class="parte2">
                 <div class="desc">Total</div>
-                <div class="result">R$ 780,00</div>
+                <div class="result">
+                    <%-- Calcular o total (subtotal + frete) --%>
+                    <fmt:formatNumber value="${subtotal + 10.0}" type="currency" currencySymbol="R$"/>
+                </div>
             </div>
         </div>
     </div>
+
+    <div>
+        <form action="/finalizar-pedido" method="post">
+                <label for="idEndereco">Escolha o endereço de entrega:</label>
+                <select id="idEndereco" name="idEndereco" required>
+                    <!-- Iterando sobre a lista de endereços e preenchendo as opções -->
+                    <c:forEach var="endereco" items="${enderecos}">
+                        <option value="${endereco.id_Endereco}">
+                            ${endereco.endereco_Rua}, ${endereco.numero}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.estado}, ${endereco.cep}
+                        </option>
+                    </c:forEach>
+                </select>
+                <button type="submit">Finalizar</button>
+            </form>
+        </div>
 
     <%@ include file="/Componentes/rodape.jsp" %>
 </body>

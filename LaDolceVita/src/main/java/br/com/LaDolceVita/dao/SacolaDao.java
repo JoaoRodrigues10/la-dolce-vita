@@ -112,4 +112,17 @@ public class SacolaDao {
             System.out.println("Erro ao atualizar a tabela SACOLA: " + e.getMessage());
         }
     }
+    public void LimparSacolaByClienteId(int clienteId) {
+        String SQL = "DELETE FROM SACOLA WHERE ID_CLIENTE = ?";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1, clienteId);
+            preparedStatement.executeUpdate();
+            System.out.println("Sacola cleared for ID_CLIENTE: " + clienteId);
+        } catch (Exception e) {
+            System.out.println("Error in connection: " + e.getMessage());
+        }
+    }
 }
