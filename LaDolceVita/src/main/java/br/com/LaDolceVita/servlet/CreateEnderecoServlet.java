@@ -44,10 +44,8 @@ public class CreateEnderecoServlet extends HttpServlet {
         enderecoDao.createEndereco(endereco);
 
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        LoginServlet loginServlet = new LoginServlet();
-        loginServlet.setClienteAutenticado(clienteAutenticado);
-        loginServlet.instaciarObjCliente(req);
-        loginServlet.setarInfosNaSessao(req);
+        clienteAutenticado = enderecoDao.selectEnderecoUsuarioLogado(clienteAutenticado);
+        req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
 
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
 

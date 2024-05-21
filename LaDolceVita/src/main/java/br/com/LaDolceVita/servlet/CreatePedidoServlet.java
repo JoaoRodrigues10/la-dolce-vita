@@ -2,6 +2,7 @@ package br.com.LaDolceVita.servlet;
 
 import br.com.LaDolceVita.dao.ItensPedidoDao;
 import br.com.LaDolceVita.dao.PedidoDao;
+import br.com.LaDolceVita.model.Cliente;
 import br.com.LaDolceVita.model.ItensPedido;
 import br.com.LaDolceVita.model.Pedido;
 
@@ -36,6 +37,10 @@ public class CreatePedidoServlet extends HttpServlet {
         PedidoDao pedidoDao = new PedidoDao();
 
         pedidoDao.createPedido(pedido,req);
+
+        Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
+        clienteAutenticado = pedidoDao.selecionarPedidosDoCliente(clienteAutenticado);
+        req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
 
         resp.sendRedirect("/cadastroItensPedido.html");
     }
