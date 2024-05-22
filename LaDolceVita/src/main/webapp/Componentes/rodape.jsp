@@ -49,7 +49,7 @@
             </div>
             <div class="rcombo">
                 <div class="subinfo">Trabelhe conosco</div>
-                <div class="info">recrutamento@ladolcevita.com.br</div>
+                <a href="/perfil.jsp"><div class="info">recrutamento@ladolcevita.com.br</div></a>
             </div>
         </div>
     </div>

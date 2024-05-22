@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: 'Abhaya Libre';
+}
+
+.aviso {
+    background-color: #FFDBE0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.comunicado {
+    font-size: 15px;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+}
+
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+}
+
+.opcoes a {
+    font-size: 25px;
+    margin: 15px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+}
+
+.acoes img {
+    margin: 0px 10px;
+    width: 25px;
+    height: auto;
+}
+
+.linha {
+    border-top: 3px solid #FFC2CB;
+    width: 100%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin: 25px;
+    color: #FFC2CB !important;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subt {
+    font-size: 30px;
+    margin: 0px 0px 10px;
+    font-weight: bold;
+}
+
+.fora {
+    height: auto;
+    width: 50em;
+    background-color: #D3D3D3;
+    padding: 1em;
+    border-radius: 20px;
+    margin-bottom: 2em;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+.desc1 {
+    font-size: 17px;
+    margin: 5px 0px 10px;
+}
+
+.dentro {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.vend {
+    padding-bottom: 0.8em;
+    font-size: 17px;
+    color: #2E2E2E;
+}
+
+.neg {
+    color: #FFC2CB;
+}
+
+.linha {
+    border-top: 2px solid #FFC2CB;
+    width: 100%;
+}
+
+.data {
+    font-size: 25px;
+    color: #FFC2CB;
+    padding: 0.5em 0em 0.1em;
+    font-weight: bold;
+}
+
+.ent {
+    font-size: 20px;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.produto {
+    display: flex;
+    flex-direction: row;
+}
+
+.foto {
+    width: 7em;
+    height: 7em;
+    border-radius: 10px;
+}
+
+.descP {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+}
+
+.np {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.desp {
+    font-size: 20px;
+}
+
+.partes {
+    display: flex;
+    flex-direction: row;
+}
+
+.inp {
+    margin: 0px 30px 30px;
+}
+
+.descricao {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input2 input {
+    border-radius: 10px;
+    border-color: #FFC2CB !important;
+    width: 20em;
+    height: 2em;
+    border-width: 3px;
+    padding-left: 1em;
+}
+
+.btm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.botaoA {
+    border-radius: 10px;
+    border-color: #FFC2CB !important;
+    background-color: #FFC2CB;
+    font-weight: bold;
+    font-size: 20px;
+    width: 6em;
+    height: 2.5em;
+    border-width: 0px;
+}
