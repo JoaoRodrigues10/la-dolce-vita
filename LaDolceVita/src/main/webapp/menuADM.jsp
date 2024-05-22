@@ -26,7 +26,7 @@
                     <div class="descricao">LUCRO</div>
                 </div>
             </a>
-            <a href="/">
+            <a href="/dashboard.jsp">
                 <div class="box">
                     <div class="descricao">ESTOQUE</div>
                 </div>

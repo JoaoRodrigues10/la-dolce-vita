@@ -82,6 +82,11 @@ body {
     margin: 0 30px 30px; /* Espaçamento entre os itens */
 }
 
+.box button {
+    background-color: pink;
+    border: none;
+}
+
 .box img {
     width: 15em;
     height: 15em;

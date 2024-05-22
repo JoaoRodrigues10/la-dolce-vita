@@ -38,17 +38,17 @@
             </a>
         </div>
         <div class="parte2">
-            <a href="/doces.jsp">
+            <a href="/find-all-categorias?categoria=DOCE">
                 <div class="box-doces">
                     <div class="doces">DOCES</div>
                 </div>
             </a>
-            <a href="/doces.html">
+            <a href="/find-all-categorias?categoria=BEBIDA">
                 <div class="box-doces">
                     <div class="doces">DOCES</div>
                 </div>
             </a>
-            <a href="/doces.html">
+            <a href="/find-all-categorias?categoria=SALGADO">
                 <div class="box-doces">
                     <div class="doces">DOCES</div>
                 </div>

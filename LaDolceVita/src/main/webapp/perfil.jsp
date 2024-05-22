@@ -40,31 +40,30 @@
         </div>
 
         <div class="parte">
-            <div class="subt">Endereço</div>
-        </div>
-
-        <div class="parte">
             <div class="subt">Meu cadastro</div>
-            <form action="editar-cliente" method="post">
+
+            <form action="/update-cliente" method="post">
+                <input type="hidden" name="id_cliente" value="id=${cliente.id}">
+
                 <div class="partes">
                     <div class="inp">
                         <div class="descricao">E-mail:</div>
                         <div class="input2">
-                            <input type="text" name="email" value="${cliente.email}" readonly>
+                            <input type="text" name="email" value="${sessionScope.email}">
                         </div>
                     </div>
 
                     <div class="inp">
                         <div class="descricao">CPF:</div>
                         <div class="input2">
-                            <input type="text" name="cpf" value="${cliente.cpf}" readonly>
+                            <input type="text" name="cpf" value="${cliente.cpf}">
                         </div>
                     </div>
 
                     <div class="inp">
                         <div class="descricao">Nome:</div>
                         <div class="input2">
-                            <input type="text" name="nome-cliente" value="${cliente.nome}" readonly>
+                            <input type="text" name="nome-cliente" value="${cliente.nome}">
                         </div>
                     </div>
                 </div>
@@ -80,14 +79,14 @@
                     <div class="inp">
                         <div class="descricao">Celular:</div>
                         <div class="input2">
-                            <input type="text" name="celular" value="${cliente.celular}" readonly>
+                            <input type="text" name="telefone" value="${cliente.telefone}">
                         </div>
                     </div>
 
                     <div class="inp">
                         <div class="descricao">Senha:</div>
                         <div class="input2">
-                            <input type="password" name="senha" value="${cliente.senha}" readonly>
+                            <input type="password" name="senha" value="${cliente.senha}">
                         </div>
                     </div>
                 </div>
@@ -96,7 +95,25 @@
                     <button class="botaoA" type="submit">Editar</button>
                 </div>
             </form>
+        </div>
 
+        <div class="parte">
+            <div class="subt">Endereço</div>
+            <div class="fora2">
+                <div class="dentro2">
+                    <div class="ent">Destinatário: <c:out value="${sessionScope.loggedUser}"/></div>
+                    <div class="produto2">
+                        <div class="descP">
+                            <div class="desp">Rua, número, complemento - Bairro</div>
+                            <div class="desp">Cidade - Estado - CEP</div>
+                        </div>
+                        <div>
+                            <button class="botaoB"><img src="/img/editar.png" alt="" class="icon"></button>
+                            <button class="botaoB"><img src="/img/x.png" alt="" class="icon"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
