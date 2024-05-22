@@ -2,6 +2,7 @@ package br.com.LaDolceVita.dao;
 
 import br.com.LaDolceVita.config.ConnectionPoolConfig;
 import br.com.LaDolceVita.model.Cliente;
+import br.com.LaDolceVita.model.Endereco;
 import br.com.LaDolceVita.model.Pedido;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,18 +10,20 @@ import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class PedidoDao {
 
-
-    public Cliente selecionarPedidosDoCliente(Cliente cliente) {
-        String SQL = "SELECT * FROM PEDIDOS WHERE ID_CLIENTE = ?";
-
+    public List<Pedido> findPedido(int idUsuario){
+        String SQL = "SELECT * FROM PEDIDOS where ID_CLIENTE = ?";
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setInt(1, cliente.getId());
+            preparedStatement.setInt(1, idUsuario);
             ResultSet resultSet = preparedStatement.executeQuery();
+            List<Pedido> pedidosUsuario = new ArrayList<>();
             while (resultSet.next()) {
                 int id_Pedido = resultSet.getInt("ID_PEDIDO");
                 int id_Cliente = resultSet.getInt("ID_CLIENTE");
@@ -30,28 +33,25 @@ public class PedidoDao {
                 String status = resultSet.getString("STATUS");
                 LocalDateTime dataCompra = timestamp.toLocalDateTime();
                 Pedido pedido = new Pedido(id_Pedido,id_Cliente,id_Endereco,valor_Total,dataCompra,status);
-                cliente.adicionarPedido(pedido);
+                pedidosUsuario.add(pedido);
             }
-            System.out.println("success in select * pedidos de: "+cliente.getNome());
+            System.out.println("success in select * pedidos do usuario");
             connection.close();
-            return cliente;
-        } catch (SQLException e) {
-            System.out.println("error in connection: "+e.getMessage());
-            return cliente;
+            return pedidosUsuario;
+        } catch (Exception e) {
+            System.out.println("fail in database connection");
+            return Collections.emptyList();
         }
     }
 
+
         public void createPedido(Pedido pedido, HttpServletRequest req){
-
         String SQL = "INSERT INTO PEDIDOS (ID_CLIENTE, ID_ENDERECO, VALOR_TOTAL, DATA_COMPRA, STATUS) VALUES (?, ?, ?, ?, ?)";
-
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-
             LocalDateTime dataCompra = pedido.getDataPedido();
             Timestamp timestamp = Timestamp.valueOf(pedido.getDataPedido());
-
             preparedStatement.setInt(1,pedido.getId_Cliente());
             preparedStatement.setInt(2,pedido.getId_Endereco());
             preparedStatement.setBigDecimal(3,pedido.getValor_Total());
@@ -74,4 +74,6 @@ public class PedidoDao {
             System.out.println("error in connection: "+e.getMessage());
         }
     }
+
+
 }
