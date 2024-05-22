@@ -13,6 +13,7 @@ public class Pedido {
     private BigDecimal valor_Total;
     private LocalDateTime dataPedido;
     private String status;
+    List<ItensPedido> itensPedidos;
 
     public Pedido(int id_Pedido, int id_Cliente, int id_Endereco, BigDecimal valor_Total, LocalDateTime dataPedido, String status) {
         this.id_Pedido = id_Pedido;

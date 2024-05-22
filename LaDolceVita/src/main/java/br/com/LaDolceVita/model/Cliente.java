@@ -58,6 +58,14 @@ public class Cliente {
         enderecos.add(endereco);
     }
 
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
     public void adicionarPedido(Pedido pedido) {
         pedidos.add(pedido);
     }

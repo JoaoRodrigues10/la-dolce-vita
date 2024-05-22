@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @WebServlet("/create-pedido")
 public class CreatePedidoServlet extends HttpServlet {
@@ -39,7 +40,8 @@ public class CreatePedidoServlet extends HttpServlet {
         pedidoDao.createPedido(pedido,req);
 
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        clienteAutenticado = pedidoDao.selecionarPedidosDoCliente(clienteAutenticado);
+        List<Pedido> pedidosUsuario = pedidoDao.findPedido(idCliente);
+        clienteAutenticado.setPedidos(pedidosUsuario);
         req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
 
         resp.sendRedirect("/cadastroItensPedido.html");

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/create-endereco")
 public class CreateEnderecoServlet extends HttpServlet {
@@ -41,13 +42,17 @@ public class CreateEnderecoServlet extends HttpServlet {
         Endereco endereco = new Endereco(id_Cliente, cep, endereco_Rua, cidade, bairro, estado, numero, complemento, referencia);
         EnderecoDao enderecoDao = new EnderecoDao();;
 
-        enderecoDao.createEndereco(endereco);
-
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        clienteAutenticado = enderecoDao.selectEnderecoUsuarioLogado(clienteAutenticado);
+        List<Endereco> enderecosUsuario = new EnderecoDao().findEndereco(idDoUsuarioLogado);
+        clienteAutenticado.setEnderecos(enderecosUsuario);
         req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
 
-        req.getRequestDispatcher("/index.jsp").forward(req,resp);
+        enderecoDao.createEndereco(endereco);
+        resp.sendRedirect("/find-Endereco");
+
+
+
+
 
     }
 }
