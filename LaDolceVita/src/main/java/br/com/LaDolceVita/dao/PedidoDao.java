@@ -16,7 +16,7 @@ import java.util.List;
 
 public class PedidoDao {
 
-    public List<Pedido> findPedido(int idUsuario){
+    public List<Pedido> findPedidos(int idUsuario){
         String SQL = "SELECT * FROM PEDIDOS where ID_CLIENTE = ?";
         try {
             Connection connection = ConnectionPoolConfig.getConnection();

@@ -40,7 +40,7 @@ public class CreatePedidoServlet extends HttpServlet {
         pedidoDao.createPedido(pedido,req);
 
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        List<Pedido> pedidosUsuario = pedidoDao.findPedido(idCliente);
+        List<Pedido> pedidosUsuario = pedidoDao.findPedidos(idCliente);
         clienteAutenticado.setPedidos(pedidosUsuario);
         req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
 

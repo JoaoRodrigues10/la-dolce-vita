@@ -38,21 +38,15 @@ public class CreateEnderecoServlet extends HttpServlet {
         String complemento = req.getParameter("complemento");
         String referencia = req.getParameter("referencia");
 
-
         Endereco endereco = new Endereco(id_Cliente, cep, endereco_Rua, cidade, bairro, estado, numero, complemento, referencia);
-        EnderecoDao enderecoDao = new EnderecoDao();;
+        EnderecoDao enderecoDao = new EnderecoDao();
+        enderecoDao.createEndereco(endereco);
 
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        List<Endereco> enderecosUsuario = new EnderecoDao().findEndereco(idDoUsuarioLogado);
+        List<Endereco> enderecosUsuario = enderecoDao.findEndereco(idDoUsuarioLogado);
         clienteAutenticado.setEnderecos(enderecosUsuario);
         req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
-
-        enderecoDao.createEndereco(endereco);
         resp.sendRedirect("/find-Endereco");
-
-
-
-
 
     }
 }

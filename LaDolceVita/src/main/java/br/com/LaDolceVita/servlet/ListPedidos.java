@@ -18,7 +18,7 @@ public class ListPedidos extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Integer idDoUsuarioLogado = (Integer) req.getSession().getAttribute("id");
-        List<Pedido> pedidosCliente = new PedidoDao().findPedido(idDoUsuarioLogado);
+        List<Pedido> pedidosCliente = new PedidoDao().findPedidos(idDoUsuarioLogado);
         req.setAttribute("pedidosCliente",pedidosCliente);
         super.doGet(req, resp);
     }

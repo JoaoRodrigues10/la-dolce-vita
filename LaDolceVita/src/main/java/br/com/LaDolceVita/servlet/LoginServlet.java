@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
         EnderecoDao enderecoDao = new EnderecoDao();
         PedidoDao pedidoDao = new PedidoDao();
         this.clienteAutenticado.setEnderecos(enderecoDao.findEndereco(idClienteAutenticado));
-        this.clienteAutenticado.setPedidos(pedidoDao.findPedido(idClienteAutenticado));
+        this.clienteAutenticado.setPedidos(pedidoDao.findPedidos(idClienteAutenticado));
     }
 
     public void setarInfosNaSessao(HttpServletRequest req){

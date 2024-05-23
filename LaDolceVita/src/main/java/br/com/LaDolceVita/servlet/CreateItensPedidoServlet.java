@@ -1,8 +1,10 @@
 package br.com.LaDolceVita.servlet;
 
 import br.com.LaDolceVita.dao.ItensPedidoDao;
+import br.com.LaDolceVita.dao.PedidoDao;
 import br.com.LaDolceVita.model.Cliente;
 import br.com.LaDolceVita.model.ItensPedido;
+import br.com.LaDolceVita.model.Pedido;
 import br.com.LaDolceVita.model.Produto;
 
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.List;
 
 @WebServlet("/create-itens-pedido")
 public class CreateItensPedidoServlet extends HttpServlet {
@@ -25,6 +28,7 @@ public class CreateItensPedidoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        Integer idCliente = (Integer) req.getSession().getAttribute("id");
         Integer idPedido = (Integer) req.getSession().getAttribute("idPedido");
         String produtoId = ("1");
         String produtoName = ("boloTeste");
@@ -44,10 +48,8 @@ public class CreateItensPedidoServlet extends HttpServlet {
         itensPedidoDao.createItensPedido(itensPedido);
 
         Cliente clienteAutenticado = (Cliente) req.getSession().getAttribute("clienteAutenticado");
-        LoginServlet loginServlet = new LoginServlet();
-        loginServlet.setClienteAutenticado(clienteAutenticado);
-        loginServlet.instaciarObjCliente(req);
-        loginServlet.setarInfosNaSessao(req);
+        List<Pedido>pedidosUsuario = new PedidoDao().findPedidos(idCliente);
+        clienteAutenticado.setPedidos(pedidosUsuario);
 
         resp.sendRedirect("/cadastroItensPedido.html");
     }
