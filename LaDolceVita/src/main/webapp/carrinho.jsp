@@ -18,7 +18,6 @@
     <%@ include file="/Componentes/cabecalho.jsp" %>
 
     <div class="titulo">CARRINHO</div>
-
     <div class="conteudo">
         <table>
             <thead>
@@ -130,19 +129,33 @@
     </div>
 
     <div>
-        <form action="/finalizar-pedido" method="post">
-                <label for="idEndereco">Escolha o endereço de entrega:</label>
-                <select id="idEndereco" name="idEndereco" required>
-                    <!-- Iterando sobre a lista de endereços e preenchendo as opções -->
-                    <c:forEach var="endereco" items="${enderecos}">
-                        <option value="${endereco.id_Endereco}">
-                            ${endereco.endereco_Rua}, ${endereco.numero}, ${endereco.bairro}, ${endereco.cidade}, ${endereco.estado}, ${endereco.cep}
-                        </option>
-                    </c:forEach>
-                </select>
-                <button type="submit">Finalizar</button>
-            </form>
-        </div>
+        <h2>Endereços</h2>
+        <select id="enderecoSelecionado">
+            <c:forEach var="endereco" items="${enderecos}">
+                <option value="${endereco.id_Endereco}">
+                    ${endereco.endereco_Rua} Nº ${endereco.numero}, ${endereco.bairro} - ${endereco.cep}
+                </option>
+            </c:forEach>
+        </select>
+    </div>
+
+    <div class="finalizar-pedido">
+        <form id="formFinalizarPedido" action="/finalizar-pedido" method="post">
+            <input type="hidden" id="inputEnderecoSelecionado" name="enderecoSelecionado">
+
+            <button type="button" class="btn btn-primary" onclick="enviarFormulario()">Finalizar Pedido</button>
+        </form>
+    </div>
+
+
+
+<script>
+    function enviarFormulario() {
+        var enderecoSelecionado = document.getElementById("enderecoSelecionado").value;
+        document.getElementById("inputEnderecoSelecionado").value = enderecoSelecionado;
+        document.forms["formFinalizarPedido"].submit();
+    }
+</script>
 
     <%@ include file="/Componentes/rodape.jsp" %>
 </body>

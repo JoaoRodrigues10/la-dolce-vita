@@ -18,7 +18,6 @@ public class CreateSacolaServlet extends HttpServlet{
         int idCliente = (Integer) req.getSession().getAttribute("id");
         int idProduto = Integer.parseInt(req.getParameter("idProdutoSacola"));
         int quantidade = Integer.parseInt(req.getParameter("quantidade"));
-
         SacolaDao sacolaDao = new SacolaDao();
 
         Sacola existingSacola = sacolaDao.findByClienteIdAndProdutoId(idCliente, idProduto);

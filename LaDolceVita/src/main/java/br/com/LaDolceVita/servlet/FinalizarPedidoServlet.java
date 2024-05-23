@@ -19,9 +19,59 @@ import java.util.List;
 @WebServlet("/finalizar-pedido")
 public class FinalizarPedidoServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PedidoDao pedidoDao = new PedidoDao();
 
+        // Obtendo o ID do cliente da sessão
+        int idCliente = (Integer) request.getSession().getAttribute("id");
+
+        // Obtendo o ID do endereço selecionado
+        int idEndereco = Integer.parseInt(request.getParameter("enderecoSelecionado"));
+
+        SacolaDao sacolaDao = new SacolaDao();
+        List<Sacola> sacolaCliente = sacolaDao.findSacolaByClienteId(idCliente);
+        BigDecimal valorTotal = calcularValorTotal(sacolaCliente);
+
+        // Data da compra
+        LocalDateTime dataCompra = LocalDateTime.now();
+
+        // Status inicial do pedido
+        String status = "Em andamento";
+
+        // Criando o objeto Pedido
+        Pedido pedido = new Pedido(idCliente, idEndereco, valorTotal, dataCompra, status);
+
+        // Criando o pedido no banco de dados
+        pedidoDao.createPedido(pedido, request);
+
+
+        ItensPedidoDao itensPedidoDao = new ItensPedidoDao();
+        for (Sacola item : sacolaCliente) {
+            int idPedido = (Integer) request.getSession().getAttribute("idPedido"); // Obtém o ID do pedido recém-criado
+            int idProduto = item.getProduto().getId(); // Obtém o ID do produto da sacola
+
+
+            ItensPedido itensPedido = new ItensPedido(idPedido, idProduto);
+
+
+            itensPedidoDao.createItensPedido(itensPedido);
+            System.out.println("o id é " + idPedido + "e o produto " + idProduto);
+        }
+
+
+        // Limpando a sacola do cliente
+        sacolaDao.LimparSacolaByClienteId(idCliente);
+
+        response.sendRedirect("/pagina-de-confirmacao.jsp");
+    }
+
+    private BigDecimal calcularValorTotal(List<Sacola> sacolaCliente) {
+        BigDecimal valorTotal = BigDecimal.ZERO;
+        for (Sacola item : sacolaCliente) {
+           BigDecimal precoItem = item.getProduto().getPreco();
+            valorTotal = valorTotal.add(precoItem.multiply(BigDecimal.valueOf(item.getQuantidade())));
+        }
+        return valorTotal;
     }
 
 

@@ -46,8 +46,14 @@ public class ItensPedidoDao {
     public void createItensPedido(ItensPedido itensPedido){
         String SQL = "INSERT INTO ITENS_DO_PEDIDO (ID_PEDIDO, ID_PRODUTO, NOME_DO_PRODUTO, QUANTIDADE, PRECO_UNIDADE) VALUES (?, ?, ?, ?, ?)";
         try {
+            if (itensPedido.getItensProduto().isEmpty()) {
+                System.out.println("A lista de itens do pedido está vazia. Nenhum item será inserido.");
+            } else
+                System.out.println("Itens do pedido encontrados. Iniciando inserção no banco de dados...");
             Connection connection = ConnectionPoolConfig.getConnection();
             for (ItemProduto itemProduto : itensPedido.getItensProduto()) {
+
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                 PreparedStatement preparedStatement = connection.prepareStatement(SQL);
                 Produto produto = itemProduto.getProduto();
                 preparedStatement.setInt(1, itensPedido.getIdPedido());
@@ -58,6 +64,7 @@ public class ItensPedidoDao {
                 preparedStatement.execute();
                 System.out.println("success in insert itens_pedido");
             }
+            System.out.println("estou qaui");
             connection.close();
         }catch (Exception e){
             System.out.println("error in connection: "+e.getMessage());

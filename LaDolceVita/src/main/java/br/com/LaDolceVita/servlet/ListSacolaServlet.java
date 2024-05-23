@@ -1,7 +1,9 @@
 package br.com.LaDolceVita.servlet;
 
 
+import br.com.LaDolceVita.dao.EnderecoDao;
 import br.com.LaDolceVita.dao.SacolaDao;
+import br.com.LaDolceVita.model.Endereco;
 import br.com.LaDolceVita.model.Produto;
 import br.com.LaDolceVita.model.Sacola;
 
@@ -23,6 +25,9 @@ public class ListSacolaServlet extends HttpServlet {
         //transforma em inteiro
         int idCliente = Integer.parseInt(idClienteStr);
 
+        EnderecoDao enderecoDao = new EnderecoDao();
+        List<Endereco> enderecosUsuario = enderecoDao.findEndereco(idCliente);
+        req.setAttribute("enderecos", enderecosUsuario);
         // cria uma nova instância da DAO
         SacolaDao sacolaDao = new SacolaDao();
 
