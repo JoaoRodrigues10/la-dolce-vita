@@ -29,6 +29,8 @@ public class FinalizarPedidoServlet extends HttpServlet {
         // Obtendo o ID do endereço selecionado
         int idEndereco = Integer.parseInt(request.getParameter("enderecoSelecionado"));
 
+
+
         SacolaDao sacolaDao = new SacolaDao();
         List<Sacola> sacolaCliente = sacolaDao.findSacolaByClienteId(idCliente);
         BigDecimal valorTotal = calcularValorTotal(sacolaCliente);
@@ -59,7 +61,9 @@ public class FinalizarPedidoServlet extends HttpServlet {
 
         //instancia itensPedidoDao e faz o insert de ItensPedido no banco de dados
         //mandando itensPedido como parametro
+        
         ItensPedidoDao itensPedidoDao = new ItensPedidoDao();
+
         itensPedidoDao.createItensPedido(itensPedido);
 
         // Limpando a sacola do cliente

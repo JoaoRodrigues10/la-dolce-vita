@@ -17,6 +17,7 @@ public class ListEnderecoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         Integer idDoUsuarioLogado = (Integer) req.getSession().getAttribute("id");
         List<Endereco> enderecosUsuario = new EnderecoDao().findEndereco(idDoUsuarioLogado);
         req.setAttribute("enderecosUsuario",enderecosUsuario);

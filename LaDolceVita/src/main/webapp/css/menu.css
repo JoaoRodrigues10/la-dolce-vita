@@ -427,40 +427,31 @@ width: 110px;
     justify-content: center;
     align-items: center;
 
-    background: #FFE7EA;
+    background: #FFDBE0;
     border-radius: 20px;
     box-shadow: 0px 5px 7px #212529;
 }
 
 
-.card-endereco > h1 {
+.card-endereco > h2 {
     color: #FFB6C1;
     font-weight: 800;
     margin: 0;
     display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 .main-endereco{
-    width: 100vw;
+    width: 10px;
     height: 100vh;
     background: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.textfieldd {
-    padding-left:90%
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
 }
 
 .textfieldd > input{
-
-    align-items:center;
     width: 100%;
     border: none;
     border-radius: 10px;

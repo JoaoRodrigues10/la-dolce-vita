@@ -29,8 +29,8 @@
         </div>
         <div class="acoes">
             <a href="/menuADM.jsp"><img src="/img/lupa.png" alt=""></a>
-            <a href="/login.jsp"><img src="/img/perfil.png" alt=""></a>
-            <a href="/carrinho.jsp"><img src="/img/sacola.png" alt=""></a>
+            <a href="/cadastroEndereco.jsp"><img src="/img/perfil.png" alt=""></a>
+            <a href="/find-all-Sacola?idCliente=1"><img src="/img/sacola.png" alt=""></a>
         </div>
     </div>
 

@@ -21,6 +21,12 @@
         <div class="logo">
             <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
         </div>
+        <div class="opcoes">
+                    <a href="/index.jsp"><buttom class="btn btn-custom">INÍCIO</buttom></a>
+                    <a href="/menu.jsp"><buttom class="btn btn-custom">MENU</buttom></a>
+                    <a href="/index.jsp#sobre"><buttom class="btn btn-custom">SOBRE</buttom></a>
+                    <a href="#rodape"><buttom class="btn btn-custom">CONTATO</buttom></a>
+                </div>
 
         <div class="acoes">
             <a href="/menuADM.jsp"><img src="/img/lupa.png" alt=""></a>
@@ -29,18 +35,17 @@
         </div>
     </div>
     <div class="linha"></div>
-                                 <div class="row">
 
-                                          <div class="col">
-                                                                        <nav aria-label="breadcrumb">
-                                                                          <ol class="breadcrumb">
-                                                                            <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
-                                                                            <li class="breadcrumb-item active" aria-current="page">Editar dados</li>
-                                                                          </ol>
-                                                                        </nav>
+         <div class="row">
 
-
-                                          </div>
+              <div class="col">
+                   <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                           <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+                           <li class="breadcrumb-item active" aria-current="page">Editar dados</li>
+                         </ol>
+                   </nav>
+</div>
                                           <div class="col-md-auto"></div>
 
                                   <div class="col col-lg-1">
@@ -53,10 +58,11 @@
 
     <div class="main-endereco">
         <div class="card-endereco">
-<div>Olá, <c:out value="${sessionScope.loggedUser}"/></div>
-            <h2>Cadastrar novo Endereco</h2>
+<h2>Olá, <c:out value="${sessionScope.loggedUser}"/> Cadastrar novo Endereco</h2><br>
 
 
+
+<div class = "bg">
 
 
                     <form class="row g-3" action="/create-endereco" method="post">
@@ -64,69 +70,85 @@
                         <div class="col-md-4">
 
                              <div class="textfieldd">
-                                    <label>CEP</label>
-                                    <input type="text" name="cep" id="cep">
+                                    <label for="cep" class="form-label">Cep</label>
+                                        <input type="text" class="form-control" id="cep" name="cep" required>
+
                              </div>
                         </div>
 
                         <div class="col-4">
                             <div class="textfieldd">
-                                <label>Cidade</label>
-                                <input type="text" name="cidade" id="cidade">
+                                <label for="cidade" class="form-label">Cidade</label>
+                                    <input type="text" class="form-control" id="cidade" name="cidade" required>
+
                             </div>
                         </div>
+                        <div class="col-md-3">
+                                                    <div class="textfieldd">
+                                                        <label for="estado" class="form-label">Estado</label>
+                                                            <select class="form-select" id="estado" name="estado" required>
+                                                              <option selected disabled value="">Choose...</option>
+                                                              <option>SP</option>
+                                                            </select>
+
+                                                    </div>
+                                                </div>
 
                          <div class="col-md-6">
                             <div class="textfieldd">
-                                <label>Rua</label>
-                                <input type="text" name="endereco_Rua" id="endereco_Rua">
+                                <label for="endereco_Rua" class="form-label">Rua</label>
+                                    <input type="text" class="form-control" id="endereco_Rua" name="endereco_Rua" required>
+
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="textfieldd">
-                                <label>Numero</label>
-                                <input type="text" name="numero" id="numero">
+                                <label for="nomero" class="form-label">Número</label>
+                                    <input type="text" class="form-control" id="nomero" name="numero" required>
+
                             </div>
                         </div>
 
 
                         <div class="col-8">
                             <div class="textfieldd">
-                                <label>Bairro</label>
-                                <input type="text" name="bairro" id="bairro">
+                                 <label for="bairro" class="form-label">Bairro</label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro" required>
+
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="textfieldd">
-                                <label>Estado</label>
-                                <input type="text" name="estado" id="estado">
-                            </div>
-                        </div>
+
 
 
                         <div class="col-md-2">
                             <div class="textfieldd">
-                                <label>Complemento</label>
-                                <input type="text" name="complemento" id="complemento">
+                                 <label for="complemento" class="form-label">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento" required>
+
                             </div>
                         </div>
 
                         <div class="col-8">
                             <div class="textfieldd">
-                                <label>Referencia</label>
-                                <input type="text" name="referencia" id="referencia">
+                                 <label for="referencia" class="form-label">Referencia</label>
+                                    <input type="text" class="form-control" id="referencia" name="referencia" required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid city.
+                                    </div>
                             </div>
                         </div>
 
                                 <div class="col-12">
                                     <button class="btn btn-custom" type="submit">Register</button>
+                                    <button class="btn btn-custom" type="reset">Limpar</button>
                                 </div>
         </form>
 </div>
 </div>
 
+</div>
 
 
 <div class="linha" id="rodape"></div>
@@ -174,13 +196,13 @@
     </div>
 
     <div class="aviso">
-        <div class="comunicado" onclick="window.location.href='/index.jsp'">WWW.LADOLCEVITA.COM.BR</div>
+            <div class="comunicado" onclick="window.location.href='/index.jsp'">WWW.LADOLCEVITA.COM.BR</div>
 
-    </div>
-    <div>
-    <div class="aviso2">Copyright © 2024 LA DOLCE VITTA  - Desenvolvido por SenacTeam.</div>
-    </div>
+        </div>
+        <div class="aviso">
+                <div class="comunicado">Copyright © 2024 LA DOLCE VITTA  - Desenvolvido por SenacTeam.</div>
 
+            </div>
 
 
 </body>

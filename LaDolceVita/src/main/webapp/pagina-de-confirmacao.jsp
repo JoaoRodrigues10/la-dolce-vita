@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,7 +28,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Pedido Confirmado!</h1>
+        <h1 class="text-center">Olá <c:out value="${sessionScope.loggedUser}"/>, Pedido Confirmado!</h1>
         <p class="lead text-center">Obrigado por sua compra! Seu pedido foi confirmado e está sendo processado. Você receberá uma confirmação por e-mail em breve.</p>
         <p class="text-center">Número do Pedido: <strong>${idPedido}</strong></p>
         <p class="text-center">Para mais informações, entre em contato conosco.</p>
