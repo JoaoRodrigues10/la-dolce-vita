@@ -43,41 +43,16 @@ public class LoginServlet extends HttpServlet {
         if(clienteAutenticado.isLogged()){
             req.getSession().setAttribute("loggedUser", email);
             req.getSession().setAttribute("id", clienteAutenticado.getId());
+            List<Endereco> enderecosUsuario = new EnderecoDao().findEndereco(clienteAutenticado.getId());
+            List<Pedido> pedidosUsuario = new PedidoDao().findPedidos(clienteAutenticado.getId());
+            this.clienteAutenticado.setEnderecos(enderecosUsuario);
+            this.clienteAutenticado.setPedidos(pedidosUsuario);
             req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
-            instaciarObjCliente(req);
-            setarInfosNaSessao(req);
             resp.sendRedirect("/index.jsp");
         } else {
             req.setAttribute("message", "Usuario ou senha inválido !");
             req.getRequestDispatcher("/login.jsp").forward(req,resp);
         }
     }
-
-
-    public void instaciarObjCliente(HttpServletRequest req){
-        Integer idClienteAutenticado = (Integer) req.getSession().getAttribute("id");
-        ClienteDao clienteDao = new ClienteDao();
-        Cliente cliente = this.clienteAutenticado;
-        this.clienteAutenticado = clienteDao.selectCliente(clienteAutenticado);
-        EnderecoDao enderecoDao = new EnderecoDao();
-        PedidoDao pedidoDao = new PedidoDao();
-        this.clienteAutenticado.setEnderecos(enderecoDao.findEndereco(idClienteAutenticado));
-        this.clienteAutenticado.setPedidos(pedidoDao.findPedidos(idClienteAutenticado));
-    }
-
-    public void setarInfosNaSessao(HttpServletRequest req){
-        List<Endereco> enderecos = this.clienteAutenticado.getEnderecos();
-        List<Pedido> pedidos = this.clienteAutenticado.getPedidos();
-
-        for (int i = 0; i < enderecos.size(); i++) {
-            req.getSession().setAttribute("idEndereco" + i, enderecos.get(i).getId_Endereco());
-        }
-
-        for (int i = 0; i < pedidos.size(); i++){
-            req.getSession().setAttribute("idPedido" + i, pedidos.get(i).getId_Pedido());
-        }
-    }
-
-
 
 }
