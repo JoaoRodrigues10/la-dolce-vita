@@ -9,13 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/carrinho.css">
     <link rel="stylesheet" href="/css/rodape.css">
+    <link rel="stylesheet" href="/css/menu.css">
     <title>Doces</title>
 </head>
 
 <body>
     <%@ include file="/Componentes/cabecalho.jsp" %>
+                                        <div class="row">
+                                              <div class="col">
+                                                               <nav aria-label="breadcrumb">
+                                                                 <ol class="breadcrumb">
+                                                                   <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+                                                                   <li class="breadcrumb-item"><a href="menu.jsp">Menu</a></li>
+                                                                   <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
+                                                                 </ol>
+                                                               </nav>
+                                               </div>
+                                              <div class="col-md-auto"></div>
+
+                                      <div class="col col-lg-1">
+                                           <c:if test="${sessionScope.loggedUser != null}">
+                                               <span>${sessionScope.loggedUser}</span>
+                                               <a href="/logout">Logout</a>
+                                           </c:if>
+                                      </div>
 
     <div class="titulo">CARRINHO</div>
     <div class="conteudo">
@@ -126,26 +146,31 @@
                 </div>
             </div>
         </div>
+
+
+        <div>
+                <h2>Endereços</h2>
+                <select id="enderecoSelecionado">
+                    <c:forEach var="endereco" items="${enderecos}">
+                        <option value="${endereco.id_Endereco}">
+                            ${endereco.endereco_Rua} Nº ${endereco.numero}, ${endereco.bairro} - ${endereco.cep}
+                        </option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <div class="finalizar-pedido">
+                <form id="formFinalizarPedido" action="/finalizar-pedido" method="post">
+                    <input type="hidden" id="inputEnderecoSelecionado" name="enderecoSelecionado">
+<br>
+                    <button type="button" class="btn btn-custom" onclick="enviarFormulario()">Comprar</button>
+                </form>
+            </div>
+
+
     </div>
 
-    <div>
-        <h2>Endereços</h2>
-        <select id="enderecoSelecionado">
-            <c:forEach var="endereco" items="${enderecos}">
-                <option value="${endereco.id_Endereco}">
-                    ${endereco.endereco_Rua} Nº ${endereco.numero}, ${endereco.bairro} - ${endereco.cep}
-                </option>
-            </c:forEach>
-        </select>
-    </div>
-
-    <div class="finalizar-pedido">
-        <form id="formFinalizarPedido" action="/finalizar-pedido" method="post">
-            <input type="hidden" id="inputEnderecoSelecionado" name="enderecoSelecionado">
-
-            <button type="button" class="btn btn-primary" onclick="enviarFormulario()">Finalizar Pedido</button>
-        </form>
-    </div>
+<br>
 
 
 

@@ -18,7 +18,15 @@
 <body>
     <%@ include file="/Componentes/cabecalho.jsp" %>
                           <div class="row">
-                              <div class="col"></div>
+                              <div class="col">
+                              <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                </ol>
+                              </nav>
+
+
+                              </div>
                               <div class="col-md-auto"></div>
 
                               <div class="col col-lg-1">
@@ -27,8 +35,8 @@
                                        <a href="/logout">Logout</a>
                                    </c:if>
                               </div>
-                            </div>
-                          </div>
+
+
 
 
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -56,7 +64,7 @@
         </div>
 
 
-        </div>
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

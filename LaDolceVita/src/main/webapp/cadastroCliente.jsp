@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +15,21 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+                  <script type="text/javascript">
+                      $(document).ready(function(){
+
+                          $('#celular').mask('(00) 00000-0000');
+                          $('#data-nascimento').mask('00-00-0000');
+                          $('#cpf').mask('000.000.000-00');
+
+                      });
+                  </script>
 <title>Cadastro do Cliente</title>
+
 
 </head>
     <body>
@@ -47,28 +62,31 @@
                     <div class="textfield">
 
                     <label><h5>E-mail</h5></label>
-                    <input type="text" name="email" id="email" value="${param.email}" placeholder="Digite seu e-mail">
+                    <input type="text" name="email" id="email" value="${param.email}" placeholder="xxxxx@ladolcevita.com">
                     <input type="hidden" id="id" name="id" value="${param.id}">
                     </div>
 <br>
                     <div class="textfield">
                     <label><h5>CPF</h5></label>
-                        <input type="text" name="cpf" id="cpf" value="${param.cpf}" placeholder="Digite seu CPF">
+                        <input type="text" name="cpf" id="cpf" value="${param.cpf}" maxlength = "11" placeholder="xxx.xxx.xxx-xx" required>
                     </div>
 <br>
                     <div class="textfield">
                     <label><h5>Nome</h5></label>
                     <input type="text" name="nome-cliente" id="nome-cliente" value="${param.nome}" placeholder="Digite seu nome">
+
                     </div>
 <br>
                     <div class="textfield">
                     <label><h5>Data de Nascimento</h5></label>
-                    <input type="text" name="data-nascimento" id="data-nascimento" value="${param.data}" placeholder="Digite sua data de nasciento">
+                    <input type="text" name="data-nascimento" id="data-nascimento" value="${param.data}"
+                    placeholder="Digite sua data de nasciento">
                     </div>
 <br>
                     <div class="textfield">
                     <label><h5>Celular</h5></label>
-                    <input type="text" name="celular" id="celular" value="${param.celular}" placeholder="Digite seu telefone">
+                    <input class="celular" type="text" name="celular" id="celular" value="${param.celular}"
+                      maxlength = "11" placeholder="(xx)x xxxx-xxxx" required>
                     </div>
 <br>
                     <div class="textfield">
@@ -76,10 +94,12 @@
                     <input type="password" name="senha" id="senha" value="${param.senha}" placeholder="Digite sua senha">
                     </div>
 <br>
+
+
                     <div class="btn">
 
                     <button class="btn-custom" type="submit">Cadastrar</button>
-                        <button class="btn-custom" type="submit">Limpar</button>
+                        <button class="btn-custom" type="reset">Limpar</button>
                     </div>
 
             </div>

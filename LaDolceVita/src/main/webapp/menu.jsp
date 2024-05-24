@@ -16,7 +16,23 @@
 
 <body>
     <%@ include file="/Componentes/cabecalho.jsp" %>
+<div class="row">
+                                          <div class="col">
+                                                           <nav aria-label="breadcrumb">
+                                                             <ol class="breadcrumb">
+                                                               <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+                                                               <li class="breadcrumb-item active" aria-current="page">Menu</li>
+                                                             </ol>
+                                                           </nav>
+                                           </div>
+                                          <div class="col-md-auto"></div>
 
+                                  <div class="col col-lg-1">
+                                       <c:if test="${sessionScope.loggedUser != null}">
+                                           <span>${sessionScope.loggedUser}</span>
+                                           <a href="/logout">Logout</a>
+                                       </c:if>
+                                  </div>
     <div class="titulo">MENU</div>
 
     <div class="conteudo">

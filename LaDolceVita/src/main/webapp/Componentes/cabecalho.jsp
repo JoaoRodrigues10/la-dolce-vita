@@ -15,10 +15,12 @@
         <div class="comunicado">FAÇA AGORA SEU PEDIDO ONLINE</div>
     </div>
 
-    <div class="cabecalho">
-        <div class="logo">
+        <div class="cabecalho">
+          <div class="logo">
             <img src="/img/logo.jfif" alt="" onclick="window.location.href='/index.jsp'">
         </div>
+
+
         <div class="opcoes">
             <a href="/index.jsp"><buttom class="btn btn-custom">INÍCIO</buttom></a>
             <a href="/menu.jsp"><buttom class="btn btn-custom">MENU</buttom></a>

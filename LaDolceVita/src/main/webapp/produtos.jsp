@@ -24,6 +24,33 @@
 
 <body>
     <%@ include file="/Componentes/cabecalho.jsp" %>
+                                       <div class="row">
+                                              <div class="col">
+                                              <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                  <li class="breadcrumb-item"><a href="index.jsp">Inicio</a></li>
+                                                  <li class="breadcrumb-item"><a href="menu.jsp">Menu</a></li>
+
+                                                            <c:forEach var="categoria" items="${categorias}" varStatus="loop">
+                                                             <c:if test="${loop.first and categoria.id > 0}">
+
+                                                  <li class="breadcrumb-item active" aria-current="page">${categoria.categoria}</li>
+                                                         </c:if>
+                                                    </c:forEach>
+
+                                                </ol>
+                                              </nav>
+
+
+                                              </div>
+                                              <div class="col-md-auto"></div>
+
+                                      <div class="col col-lg-1">
+                                           <c:if test="${sessionScope.loggedUser != null}">
+                                               <span>${sessionScope.loggedUser}</span>
+                                               <a href="/logout">Logout</a>
+                                           </c:if>
+                                      </div>
 
     <c:forEach var="categoria" items="${categorias}" varStatus="loop">
            <c:if test="${loop.first and categoria.id > 0}">

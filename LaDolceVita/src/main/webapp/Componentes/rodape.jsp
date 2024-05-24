@@ -58,9 +58,12 @@
         <div class="comunicado" onclick="window.location.href='/index.jsp'">WWW.LADOLCEVITA.COM.BR</div>
 
     </div>
-    <div>
-    <div class="aviso2">Copyright © 2024 LA DOLCE VITTA  - Desenvolvido por SenacTeam.</div>
-    </div>
+    <div class="aviso">
+            <div class="comunicado">Copyright © 2024 LA DOLCE VITTA  - Desenvolvido por SenacTeam.</div>
+
+        </div>
+
+
 
 
 </body>
