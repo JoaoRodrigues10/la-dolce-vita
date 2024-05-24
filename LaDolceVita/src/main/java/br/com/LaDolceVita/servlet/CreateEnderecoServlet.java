@@ -46,7 +46,7 @@ public class CreateEnderecoServlet extends HttpServlet {
         List<Endereco> enderecosUsuario = enderecoDao.findEndereco(idDoUsuarioLogado);
         clienteAutenticado.setEnderecos(enderecosUsuario);
         req.getSession().setAttribute("clienteAutenticado", clienteAutenticado);
-        resp.sendRedirect("/find-Endereco");
+        resp.sendRedirect("/perfil.jsp");
 
     }
 }

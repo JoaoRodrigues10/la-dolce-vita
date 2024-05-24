@@ -28,8 +28,32 @@
             <a href="#rodape"><buttom class="btn btn-custom">CONTATO</buttom></a>
         </div>
         <div class="acoes">
+
+
+
+            <%
+            // Verifica se o cliente tem um ID
+            Integer clienteId = (Integer) request.getSession().getAttribute("id");
+            if (clienteId != null) {
+            %>
+                <a href="/perfil.jsp"><img src="/img/perfil.png" alt=""></a>
+            <%
+            } else {
+
+                if (clienteId != null && clienteId == 1) {
+            %>
+                <a href="/menuADM.jsp"><img src="/img/perfil.png" alt=""></a>
+            <%
+                } else {
+            %>
+                <a href="/cadastroCliente.jsp"><img src="/img/perfil.png" alt=""></a>
+            <%
+                }
+            }
+            %>
+
+
             <a href="/menuADM.jsp"><img src="/img/lupa.png" alt=""></a>
-            <a href="/cadastroEndereco.jsp"><img src="/img/perfil.png" alt=""></a>
             <a href="/find-all-Sacola?idCliente=1"><img src="/img/sacola.png" alt=""></a>
         </div>
     </div>

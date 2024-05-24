@@ -53,23 +53,7 @@
                 </div>
             </a>
         </div>
-        <div class="parte2">
-            <a href="/find-all-categorias?categoria=DOCE">
-                <div class="box-doces">
-                    <div class="doces">DOCES</div>
-                </div>
-            </a>
-            <a href="/find-all-categorias?categoria=BEBIDA">
-                <div class="box-doces">
-                    <div class="doces">DOCES</div>
-                </div>
-            </a>
-            <a href="/find-all-categorias?categoria=SALGADO">
-                <div class="box-doces">
-                    <div class="doces">DOCES</div>
-                </div>
-            </a>
-        </div>
+
     </div>
 
     <%@ include file="/Componentes/rodape.jsp" %>

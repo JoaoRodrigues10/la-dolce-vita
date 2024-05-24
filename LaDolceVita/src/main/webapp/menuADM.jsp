@@ -21,11 +21,7 @@
 
     <div class="conteudo">
         <div class="parte1">
-            <a href="/fluxoCaixa.jsp">
-                <div class="box">
-                    <div class="descricao">LUCRO</div>
-                </div>
-            </a>
+       
             <a href="/dashboard.jsp">
                 <div class="box">
                     <div class="descricao">ESTOQUE</div>
