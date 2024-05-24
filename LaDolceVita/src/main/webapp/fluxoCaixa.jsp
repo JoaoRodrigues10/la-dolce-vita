@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluxo de caixa</title>
-    <link href="/css/fluxoCaixa.css"> rel = "stylesheet">
+    <link href="/css/fluxoCaixa.css" rel="stylesheet">
 </head>
 <body>
-    <img src="./Image/La Dolce Vita.png" alt="Logo">
+    <img src="/img/La Dolce Vita.png" alt="Logo">
     <hr>
 
     <br></br>
@@ -21,9 +21,9 @@
                     <tr>
                         <th>Cod</th>
                         <th>Produto</th>
-                        <th>Valor Unitário</th>
+                        <th>Valor Unitario</th>
                         <th>Imposto</th>
-                        <th>Lucro Liquído</th>
+                        <th>Lucro Liquido</th>
                     </tr>
                 </thead>
 
@@ -62,7 +62,7 @@
 
                     <tr>
                         <td>005</td>
-                        <td>Pães de Canela</td>
+                        <td>Paes de Canela</td>
                         <td><strong>R$1,50</strong></td>
                         <td>5%</td>
                         <td><strong>R$1,45</strong></td>
@@ -118,7 +118,7 @@
         <img width="20" height="20" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
     </div>
 
-    <a href="Menu.html">
+    <a href="menuADM.jsp">
         <button class="but1">Voltar</button>
    </a>
 
@@ -126,6 +126,6 @@
     <div class="link">
         <h3>WWW.LADOLCEVITA.COM.BR</h3>
       </div>
-      <script src="script.js"></script>
+      <script src="/css/script.js"></script>
 </body>
 </html>
