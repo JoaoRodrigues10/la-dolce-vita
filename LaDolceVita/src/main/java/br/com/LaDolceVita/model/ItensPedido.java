@@ -9,10 +9,15 @@ public class ItensPedido {
     private int idPedido;
     private List<ItemProduto> itensProduto;
 
+    public ItensPedido(int idPedido) {
+        this.idPedido = idPedido;
+        this.itensProduto = new ArrayList<>();
+    }
+
     public ItensPedido(int idItensPedido, int idPedido) {
         this.idItensPedido = idItensPedido;
         this.idPedido = idPedido;
-        this.itensProduto = new ArrayList<>();
+
     }
 
     public ItensPedido() {

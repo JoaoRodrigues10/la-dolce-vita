@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/finalizar-pedido")
@@ -44,20 +45,22 @@ public class FinalizarPedidoServlet extends HttpServlet {
         // Criando o pedido no banco de dados
         pedidoDao.createPedido(pedido, request);
 
+        //intancia objeto pedido com o id do pedido
+        int idPedido = (Integer) request.getSession().getAttribute("idPedido");
+        ItensPedido itensPedido = new ItensPedido(idPedido);
 
-        ItensPedidoDao itensPedidoDao = new ItensPedidoDao();
-        for (Sacola item : sacolaCliente) {
-            int idPedido = (Integer) request.getSession().getAttribute("idPedido"); // Obtém o ID do pedido recém-criado
-            int idProduto = item.getProduto().getId(); // Obtém o ID do produto da sacola
-
-
-            ItensPedido itensPedido = new ItensPedido(idPedido, idProduto);
-
-
-            itensPedidoDao.createItensPedido(itensPedido);
-            System.out.println("o id é " + idPedido + "e o produto " + idProduto);
+        //itera a sacola adicionando produto e quantidade a lista "itemProduto"
+        //dentro da classe itensPedido
+        for(Sacola item : sacolaCliente){
+            Produto produto = item.getProduto();
+            int quantidade = item.getQuantidade();
+            itensPedido.adicionarItem(produto,quantidade);
         }
 
+        //instancia itensPedidoDao e faz o insert de ItensPedido no banco de dados
+        //mandando itensPedido como parametro
+        ItensPedidoDao itensPedidoDao = new ItensPedidoDao();
+        itensPedidoDao.createItensPedido(itensPedido);
 
         // Limpando a sacola do cliente
         sacolaDao.LimparSacolaByClienteId(idCliente);
